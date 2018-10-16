@@ -22,8 +22,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        reactNativeBridge = ReactNativeBridge()
-        
         let btn1 = UIButton.init()
         btn1.frame = CGRect.init(x: 0, y: 0, width: 60, height: 30)
         btn1.tag = 1
@@ -62,6 +60,9 @@ class ViewController: UIViewController {
             
         }else {
             
+        }
+        if reactNativeBridge == nil {
+            reactNativeBridge = ReactNativeBridge()
         }
         let vc = ReactViewController(moduleName: "RNHighScores", bridge: reactNativeBridge!.bridge)
         self.present(vc, animated: true, completion: nil)
