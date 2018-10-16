@@ -14,9 +14,9 @@ package-lock.json
 *.sln
 
 # Xcode
-ios/*/*.xcworkspace/
-ios/*/Pods/
-ios/*/Podfile.lock
+ios/*.xcworkspace/
+ios/Pods/
+ios/Podfile.lock
 
 bundle/android/*
 !bundle/android/.gitkeep
