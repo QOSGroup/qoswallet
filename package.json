@@ -1,0 +1,16 @@
+{
+  "name": "native_embed_rn",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "build-ios": "react-native bundle --entry-file index.js --bundle-output ./bundle/ios/index.ios.jsbundle --platform ios --assets-dest ./bundle/ios --dev false",
+    "build-android": "react-native bundle --entry-file index.js --bundle-output ./bundle/android/index.android.jsbundle --platform android --assets-dest ./bundle/android --dev false",
+    "build": "npm run build-ios && npm run build-android"
+  },
+  "dependencies": {
+    "react": "16.5.0",
+    "react-native": "^0.57.3",
+    "react-navigation": "^2.18.0"
+  }
+}
