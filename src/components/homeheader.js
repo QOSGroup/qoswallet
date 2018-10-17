@@ -1,21 +1,16 @@
 import React from 'react'
 import { StyleSheet, Image, View, TouchableOpacity } from 'react-native'
-import { NativeModules } from 'react-native'
 
-const RNBridgeModule = NativeModules.RNBridgeModule
+import Component from './base'
 
-export default class LogoTitle extends React.Component {
-
-    onPressBack() {
-        RNBridgeModule.backToViewController()
-    }
+export default class LogoTitle extends Component {
 
     render() {
         return (
             <View style={styles.container}>
 
                 <View style={styles.left}>
-                    <TouchableOpacity onPress={this.onPressBack}>
+                    <TouchableOpacity onPress={this.backToWallet}>
                         <Image
                             source={require('react-navigation-stack/dist/views/assets/back-icon.png')}
                             style={{ width: 12, height: 21 }}

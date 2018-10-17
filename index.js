@@ -1,37 +1,13 @@
-import React from "react";
-import { AppRegistry } from "react-native";
+import React from 'react'
+import { AppRegistry } from 'react-native'
+import Component from './src/components/base'
+import RootStack from './src/route'
 
-import { createStackNavigator } from 'react-navigation';
-
-
-import HomeScreen from './src/home'
-import DetailsScreen from './src/detail'
-
-const RootStack = createStackNavigator(
-  {
-    Home: HomeScreen,
-    Details: DetailsScreen,
-  },
-  {
-    initialRouteName: 'Home',
-    navigationOptions: {
-      headerStyle: {
-        backgroundColor: '#f4511e',
-      },
-      headerTintColor: '#fff',
-      headerTitleStyle: {
-        fontWeight: 'bold',
-      },
-    },
-  }
-);
-
-
-class RNHighScores extends React.Component {
+class QOSWallet extends Component {
   render() {
     return <RootStack />;
   }
 }
 
 // 整体js模块的名称
-AppRegistry.registerComponent("RNHighScores", () => RNHighScores);
+AppRegistry.registerComponent("qosexample", () => QOSWallet);

@@ -1,20 +1,18 @@
 import React from 'react'
 import { StyleSheet, Text, View, Button } from 'react-native'
-import { NativeModules } from 'react-native'
-import LogoTitle from './components/homeheader'
+import LogoTitle from '../components/homeheader'
 
-const RNBridgeModule = NativeModules.RNBridgeModule
+import Component from '../components/base'
 
-export default class HomeScreen extends React.Component {
-    static navigationOptions = ({ navigation, navigationOptions }) => {
-        return {
-            // title: 'Home'
-            headerTitle: <LogoTitle />,
-        }
+export default class HomeScreen extends Component {
+    constructor(props) {
+        super(props)
     }
 
-    onPressBack() {
-        RNBridgeModule.backToViewController()
+    static navigationOptions = ({ navigation, navigationOptions }) => {
+        return {
+            headerTitle: <LogoTitle />,
+        }
     }
 
     render() {
@@ -28,7 +26,7 @@ export default class HomeScreen extends React.Component {
                 <Text style={styles.highScoresTitle}>欢迎!</Text>
                 <Text style={styles.scores}>{contents}</Text>
                 <Button
-                    onPress={this.onPressBack}
+                    onPress={this.backToWallet}
                     title="Go back to Native"
                     color="#841584"
                     accessibilityLabel="Go back to Native"
