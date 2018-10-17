@@ -1,6 +1,6 @@
 //
-//  NativeEmbedRNUITests.swift
-//  NativeEmbedRNUITests
+//  qoswalletUITests.swift
+//  qoswalletUITests
 //
 //  Created by Wanghao on 2018/10/12.
 //  Copyright © 2018年 qos. All rights reserved.
@@ -8,7 +8,7 @@
 
 import XCTest
 
-class NativeEmbedRNUITests: XCTestCase {
+class qoswalletUITests: XCTestCase {
         
     override func setUp() {
         super.setUp()

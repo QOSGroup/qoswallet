@@ -2,7 +2,7 @@
 # platform :ios, '9.0'
 use_frameworks!
 
-target 'NativeEmbedRN' do
+target 'qoswallet' do
   
 # 'node_modules'目录一般位于根目录中
   # 但是如果你的结构不同，那你就要根据实际路径修改下面的`:path`
@@ -32,16 +32,16 @@ target 'NativeEmbedRN' do
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
-  # Pods for NativeEmbedRN
+  # Pods for qoswallet
   pod 'Alamofire'
   pod 'SSZipArchive'
 
-  target 'NativeEmbedRNTests' do
+  target 'qoswalletTests' do
     inherit! :search_paths
     # Pods for testing
   end
 
-  target 'NativeEmbedRNUITests' do
+  target 'qoswalletUITests' do
     inherit! :search_paths
     # Pods for testing
   end
