@@ -1,6 +1,7 @@
 import React from 'react'
-import { StyleSheet, Text, View, Button } from 'react-native'
-import LogoTitle from '../components/homeheader'
+import { StyleSheet, Text, View, Button, Alert } from 'react-native'
+import LogoTitle from '../components/home/headerTitle'
+import HeaderLeft from '../components/home/headerLeft'
 
 import Component from '../components/base'
 
@@ -11,7 +12,15 @@ export default class HomeScreen extends Component {
 
     static navigationOptions = () => {
         return {
+            headerLeft: <HeaderLeft />,
             headerTitle: <LogoTitle />,
+            headerRight: (
+                <Button
+                    onPress={() => Alert.alert('欢迎使用QOS-RN应用')}
+                    title="关于"
+                    color="#fff"
+                />
+            ),
         }
     }
 
@@ -33,13 +42,11 @@ export default class HomeScreen extends Component {
                 />
                 <Button
                     title="Go to Details"
-                    onPress={
-                        () =>
-                            this.props.navigation.navigate('Details', {
-                                itemId: 86,
-                                otherParam: 'anything you want here',
-                            })
-                    }
+                    onPress={() =>
+                        this.props.navigation.navigate('Details', {
+                            itemId: 86,
+                            otherParam: 'anything you want here',
+                        })}
                 />
             </View>
         );
@@ -62,5 +69,14 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         color: '#333333',
         marginBottom: 5
-    }
+    },
+    left: {
+        position: 'absolute',
+        left: 10,
+        width: 12,
+        top: 0,
+        bottom: 0,
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
 });

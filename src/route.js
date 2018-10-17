@@ -17,6 +17,7 @@ const RootStack = createStackNavigator(
 			headerTitleStyle: {
 				fontWeight: 'bold',
 			},
+            headerBackTitle: null
 		},
 	},
 )
