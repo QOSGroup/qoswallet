@@ -9,7 +9,7 @@ export default class HomeScreen extends Component {
         super(props)
     }
 
-    static navigationOptions = ({ navigation, navigationOptions }) => {
+    static navigationOptions = () => {
         return {
             headerTitle: <LogoTitle />,
         }
@@ -49,18 +49,18 @@ export default class HomeScreen extends Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-        backgroundColor: "#FFFFFF"
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: '#FFFFFF'
     },
     highScoresTitle: {
         fontSize: 20,
-        textAlign: "center",
+        textAlign: 'center',
         margin: 10
     },
     scores: {
-        textAlign: "center",
-        color: "#333333",
+        textAlign: 'center',
+        color: '#333333',
         marginBottom: 5
     }
 });
