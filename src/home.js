@@ -1,15 +1,19 @@
-import React from 'react';
-import { StyleSheet, Text, View, Button } from "react-native";
-import { NativeModules } from "react-native";
+import React from 'react'
+import { StyleSheet, Text, View, Button } from 'react-native'
+import { NativeModules } from 'react-native'
+import LogoTitle from './components/homeheader'
 
 const RNBridgeModule = NativeModules.RNBridgeModule
 
 export default class HomeScreen extends React.Component {
-    static navigationOptions = {
-        title: 'Home'
+    static navigationOptions = ({ navigation, navigationOptions }) => {
+        return {
+            // title: 'Home'
+            headerTitle: <LogoTitle />,
+        }
     }
 
-    onPressLearnMore() {
+    onPressBack() {
         RNBridgeModule.backToViewController()
     }
 
@@ -24,7 +28,7 @@ export default class HomeScreen extends React.Component {
                 <Text style={styles.highScoresTitle}>欢迎!</Text>
                 <Text style={styles.scores}>{contents}</Text>
                 <Button
-                    onPress={this.onPressLearnMore}
+                    onPress={this.onPressBack}
                     title="Go back to Native"
                     color="#841584"
                     accessibilityLabel="Go back to Native"
