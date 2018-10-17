@@ -1,7 +1,8 @@
-import React from 'react';
-import { Text, View, Button } from "react-native";
+import React from 'react'
+import { Text, View, Button } from 'react-native'
+import Component from '../components/base'
 
-export default class DetailsScreen extends React.Component {
+export default class DetailsScreen extends Component {
     static navigationOptions = ({ navigation, navigationOptions }) => {
         return {
             title: navigation.getParam('otherParam', 'A Nested Details Screen'),

@@ -64,7 +64,7 @@ class ViewController: UIViewController {
         if reactNativeBridge == nil {
             reactNativeBridge = ReactNativeBridge()
         }
-        let vc = ReactViewController(moduleName: "RNHighScores", bridge: reactNativeBridge!.bridge)
+        let vc = ReactViewController(moduleName: "qosexample", bridge: reactNativeBridge!.bridge)
         self.present(vc, animated: true, completion: nil)
     }
     
