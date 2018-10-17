@@ -6,36 +6,22 @@ const RNBridgeModule = NativeModules.RNBridgeModule
 
 export default class HomeScreen extends React.Component {
     static navigationOptions = {
-        title: 'Home',
-        // headerStyle: {
-        //     backgroundColor: '#f4511e',
-        // },
-        // headerTintColor: '#fff',
-        // headerTitleStyle: {
-        //     fontWeight: 'bold',
-        // },
+        title: 'Home'
     }
 
     onPressLearnMore() {
         RNBridgeModule.backToViewController()
-        // Alert.alert('You tapped the button!')
     }
 
     render() {
-        // var contents = this.props["scores"].map(score => (
-        //   <Text key={score.name}>
-        //     {score.name}:{score.value}
-        //     {"\n"}
-        //   </Text>
-        // ));
         const contents = (
             <Text>
-                这是一段测试文本
-      </Text>
+                您已进入RN应用
+            </Text>
         )
         return (
             <View style={styles.container}>
-                <Text style={styles.highScoresTitle}>2048 High Scores!</Text>
+                <Text style={styles.highScoresTitle}>欢迎!</Text>
                 <Text style={styles.scores}>{contents}</Text>
                 <Button
                     onPress={this.onPressLearnMore}
