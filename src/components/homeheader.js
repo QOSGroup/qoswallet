@@ -1,9 +1,7 @@
-import React from 'react';
-import {
-    StyleSheet, Image, View, TouchableOpacity,
-} from 'react-native';
+import React from 'react'
+import { StyleSheet, Image, View, TouchableOpacity } from 'react-native'
 
-import Component from './base';
+import Component from './base'
 
 export default class LogoTitle extends Component {
     render() {
