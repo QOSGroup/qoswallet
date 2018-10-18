@@ -1,6 +1,6 @@
 //
 //  ReactViewController.swift
-//  NativeEmbedRN
+//  qoswallet
 //
 //  Created by Wanghao on 2018/10/12.
 //  Copyright © 2018年 qos. All rights reserved.
@@ -10,6 +10,9 @@ import UIKit
 import React
 
 class ReactViewController: UIViewController {
+    
+    private var jsCodeLocation: NSURL?
+    
     
     init(moduleName: String, bridge: RCTBridge) {
         super.init(nibName: nil, bundle: nil)

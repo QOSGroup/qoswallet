@@ -7,19 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		20E91402BA05978EDEE99207 /* Pods_NativeEmbedRNUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6DC2061D644AECCC86FF3ED /* Pods_NativeEmbedRNUITests.framework */; };
-		2D194EEDF170E169A0B6BB7D /* Pods_NativeEmbedRN.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D056A84399803C3E87517BC0 /* Pods_NativeEmbedRN.framework */; };
-		BCF4493D20CF99BB0FF25E43 /* Pods_NativeEmbedRNTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8303E54535B0D37D776395C5 /* Pods_NativeEmbedRNTests.framework */; };
+		61B7EDB21F981A87E06B800A /* Pods_qoswallet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B7CDCE203FB87DC71B226D5 /* Pods_qoswallet.framework */; };
+		78AE2EC1AEB51B406DBF7E87 /* Pods_qoswalletTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E845F75050787717DCDA427 /* Pods_qoswalletTests.framework */; };
+		B73471C81458D4AA06F987F7 /* Pods_qoswalletUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7DC73B127CF3DF3CD92AC5A /* Pods_qoswalletUITests.framework */; };
+		D22AA1302176DE6C0079DD39 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22AA12F2176DE6C0079DD39 /* Common.swift */; };
 		D241BDE7217050AD00E00FA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D241BDE6217050AD00E00FA4 /* AppDelegate.swift */; };
 		D241BDE9217050AD00E00FA4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D241BDE8217050AD00E00FA4 /* ViewController.swift */; };
 		D241BDEC217050AD00E00FA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D241BDEA217050AD00E00FA4 /* Main.storyboard */; };
 		D241BDEE217050AD00E00FA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D241BDED217050AD00E00FA4 /* Assets.xcassets */; };
 		D241BDF1217050AD00E00FA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D241BDEF217050AD00E00FA4 /* LaunchScreen.storyboard */; };
-		D241BDFC217050AD00E00FA4 /* NativeEmbedRNTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D241BDFB217050AD00E00FA4 /* NativeEmbedRNTests.swift */; };
-		D241BE07217050AD00E00FA4 /* NativeEmbedRNUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D241BE06217050AD00E00FA4 /* NativeEmbedRNUITests.swift */; };
+		D241BDFC217050AD00E00FA4 /* qoswalletTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D241BDFB217050AD00E00FA4 /* qoswalletTests.swift */; };
+		D241BE07217050AD00E00FA4 /* qoswalletUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D241BE06217050AD00E00FA4 /* qoswalletUITests.swift */; };
 		D24253E72170B61700A6AE94 /* ReactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24253E62170B61700A6AE94 /* ReactViewController.swift */; };
-		D24253ED217431B400A6AE94 /* IOSIntentModule.m in Sources */ = {isa = PBXBuildFile; fileRef = D24253EC217431B400A6AE94 /* IOSIntentModule.m */; };
-		D24253F1217439CF00A6AE94 /* IOSIntentModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24253F0217439CF00A6AE94 /* IOSIntentModule.swift */; };
+		D24253ED217431B400A6AE94 /* RNBridgeModule.m in Sources */ = {isa = PBXBuildFile; fileRef = D24253EC217431B400A6AE94 /* RNBridgeModule.m */; };
+		D24253F1217439CF00A6AE94 /* RNBridgeModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24253F0217439CF00A6AE94 /* RNBridgeModule.swift */; };
 		D24253F32174BFE400A6AE94 /* ReactNativeBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24253F22174BFE400A6AE94 /* ReactNativeBridge.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,33 +42,40 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		08E1D5758402C3EDC92DEBB7 /* Pods-NativeEmbedRNTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NativeEmbedRNTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NativeEmbedRNTests/Pods-NativeEmbedRNTests.debug.xcconfig"; sourceTree = "<group>"; };
-		24DB833EB8599DB0929D3E59 /* Pods-NativeEmbedRN.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NativeEmbedRN.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NativeEmbedRN/Pods-NativeEmbedRN.debug.xcconfig"; sourceTree = "<group>"; };
-		8303E54535B0D37D776395C5 /* Pods_NativeEmbedRNTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NativeEmbedRNTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		870CA817C5FCB4E5079BAAEE /* Pods-NativeEmbedRNUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NativeEmbedRNUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NativeEmbedRNUITests/Pods-NativeEmbedRNUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		A6DC2061D644AECCC86FF3ED /* Pods_NativeEmbedRNUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NativeEmbedRNUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CCA90CABE64EAD0807980F31 /* Pods-NativeEmbedRNTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NativeEmbedRNTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NativeEmbedRNTests/Pods-NativeEmbedRNTests.release.xcconfig"; sourceTree = "<group>"; };
-		CF0A2D91852AFA38A7FC3770 /* Pods-NativeEmbedRNUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NativeEmbedRNUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NativeEmbedRNUITests/Pods-NativeEmbedRNUITests.release.xcconfig"; sourceTree = "<group>"; };
-		D056A84399803C3E87517BC0 /* Pods_NativeEmbedRN.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NativeEmbedRN.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D241BDE3217050AD00E00FA4 /* NativeEmbedRN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NativeEmbedRN.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		017ECE414B1BBD27CE16E2AB /* Pods-qoswalletUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-qoswalletUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-qoswalletUITests/Pods-qoswalletUITests.release.xcconfig"; sourceTree = "<group>"; };
+		0E845F75050787717DCDA427 /* Pods_qoswalletTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_qoswalletTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		16B8374F46924D2656DAEAB3 /* Pods-qoswalletTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-qoswalletTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-qoswalletTests/Pods-qoswalletTests.release.xcconfig"; sourceTree = "<group>"; };
+		2AB3C10C1CE33AF568085535 /* Pods-NativeEmbedRNUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NativeEmbedRNUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NativeEmbedRNUITests/Pods-NativeEmbedRNUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		2B7CDCE203FB87DC71B226D5 /* Pods_qoswallet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_qoswallet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C6FC32C7F63641CD2C830AF /* Pods-qoswallet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-qoswallet.release.xcconfig"; path = "Pods/Target Support Files/Pods-qoswallet/Pods-qoswallet.release.xcconfig"; sourceTree = "<group>"; };
+		6856E3AD6EAAF812C936E5B8 /* Pods-NativeEmbedRNTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NativeEmbedRNTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NativeEmbedRNTests/Pods-NativeEmbedRNTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6D7072DE687B6B08D7AE200D /* Pods-NativeEmbedRN.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NativeEmbedRN.release.xcconfig"; path = "Pods/Target Support Files/Pods-NativeEmbedRN/Pods-NativeEmbedRN.release.xcconfig"; sourceTree = "<group>"; };
+		91FF521AF3E167A34E62631E /* Pods-qoswalletTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-qoswalletTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-qoswalletTests/Pods-qoswalletTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C0CD0AFA62301ED9A95891F7 /* Pods-NativeEmbedRN.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NativeEmbedRN.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NativeEmbedRN/Pods-NativeEmbedRN.debug.xcconfig"; sourceTree = "<group>"; };
+		D0F0ABB91BA9B78A289C448F /* Pods-NativeEmbedRNTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NativeEmbedRNTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NativeEmbedRNTests/Pods-NativeEmbedRNTests.release.xcconfig"; sourceTree = "<group>"; };
+		D22AA12F2176DE6C0079DD39 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		D241BDE3217050AD00E00FA4 /* qoswallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = qoswallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D241BDE6217050AD00E00FA4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D241BDE8217050AD00E00FA4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D241BDEB217050AD00E00FA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D241BDED217050AD00E00FA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D241BDF0217050AD00E00FA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D241BDF2217050AD00E00FA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D241BDF7217050AD00E00FA4 /* NativeEmbedRNTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NativeEmbedRNTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D241BDFB217050AD00E00FA4 /* NativeEmbedRNTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeEmbedRNTests.swift; sourceTree = "<group>"; };
+		D241BDF7217050AD00E00FA4 /* qoswalletTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = qoswalletTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D241BDFB217050AD00E00FA4 /* qoswalletTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = qoswalletTests.swift; sourceTree = "<group>"; };
 		D241BDFD217050AD00E00FA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D241BE02217050AD00E00FA4 /* NativeEmbedRNUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NativeEmbedRNUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D241BE06217050AD00E00FA4 /* NativeEmbedRNUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeEmbedRNUITests.swift; sourceTree = "<group>"; };
+		D241BE02217050AD00E00FA4 /* qoswalletUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = qoswalletUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D241BE06217050AD00E00FA4 /* qoswalletUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = qoswalletUITests.swift; sourceTree = "<group>"; };
 		D241BE08217050AD00E00FA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D24253E62170B61700A6AE94 /* ReactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactViewController.swift; sourceTree = "<group>"; };
-		D24253EA217431B400A6AE94 /* NativeEmbedRN-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NativeEmbedRN-Bridging-Header.h"; sourceTree = "<group>"; };
-		D24253EC217431B400A6AE94 /* IOSIntentModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IOSIntentModule.m; sourceTree = "<group>"; };
-		D24253F0217439CF00A6AE94 /* IOSIntentModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOSIntentModule.swift; sourceTree = "<group>"; };
+		D24253EA217431B400A6AE94 /* qoswallet-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "qoswallet-Bridging-Header.h"; sourceTree = "<group>"; };
+		D24253EC217431B400A6AE94 /* RNBridgeModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNBridgeModule.m; sourceTree = "<group>"; };
+		D24253F0217439CF00A6AE94 /* RNBridgeModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNBridgeModule.swift; sourceTree = "<group>"; };
 		D24253F22174BFE400A6AE94 /* ReactNativeBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactNativeBridge.swift; sourceTree = "<group>"; };
-		FD7C9B311E0391A34459F077 /* Pods-NativeEmbedRN.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NativeEmbedRN.release.xcconfig"; path = "Pods/Target Support Files/Pods-NativeEmbedRN/Pods-NativeEmbedRN.release.xcconfig"; sourceTree = "<group>"; };
+		E80D2F4425670150E1C0FACC /* Pods-qoswalletUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-qoswalletUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-qoswalletUITests/Pods-qoswalletUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		EFE1708FCB8AA772C7AA32BD /* Pods-NativeEmbedRNUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NativeEmbedRNUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NativeEmbedRNUITests/Pods-NativeEmbedRNUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F152C61291997495F9105600 /* Pods-qoswallet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-qoswallet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-qoswallet/Pods-qoswallet.debug.xcconfig"; sourceTree = "<group>"; };
+		F7DC73B127CF3DF3CD92AC5A /* Pods_qoswalletUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_qoswalletUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D194EEDF170E169A0B6BB7D /* Pods_NativeEmbedRN.framework in Frameworks */,
+				61B7EDB21F981A87E06B800A /* Pods_qoswallet.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,7 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BCF4493D20CF99BB0FF25E43 /* Pods_NativeEmbedRNTests.framework in Frameworks */,
+				78AE2EC1AEB51B406DBF7E87 /* Pods_qoswalletTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,157 +99,164 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				20E91402BA05978EDEE99207 /* Pods_NativeEmbedRNUITests.framework in Frameworks */,
+				B73471C81458D4AA06F987F7 /* Pods_qoswalletUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		ADE9EF00A9A36F18DB12A347 /* Pods */ = {
+		AD588629FD1A5AD83C38D5C8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				24DB833EB8599DB0929D3E59 /* Pods-NativeEmbedRN.debug.xcconfig */,
-				FD7C9B311E0391A34459F077 /* Pods-NativeEmbedRN.release.xcconfig */,
-				08E1D5758402C3EDC92DEBB7 /* Pods-NativeEmbedRNTests.debug.xcconfig */,
-				CCA90CABE64EAD0807980F31 /* Pods-NativeEmbedRNTests.release.xcconfig */,
-				870CA817C5FCB4E5079BAAEE /* Pods-NativeEmbedRNUITests.debug.xcconfig */,
-				CF0A2D91852AFA38A7FC3770 /* Pods-NativeEmbedRNUITests.release.xcconfig */,
+				2B7CDCE203FB87DC71B226D5 /* Pods_qoswallet.framework */,
+				0E845F75050787717DCDA427 /* Pods_qoswalletTests.framework */,
+				F7DC73B127CF3DF3CD92AC5A /* Pods_qoswalletUITests.framework */,
 			);
-			name = Pods;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		D241BDDA217050AD00E00FA4 = {
 			isa = PBXGroup;
 			children = (
-				D241BDE5217050AD00E00FA4 /* NativeEmbedRN */,
-				D241BDFA217050AD00E00FA4 /* NativeEmbedRNTests */,
-				D241BE05217050AD00E00FA4 /* NativeEmbedRNUITests */,
+				D241BDE5217050AD00E00FA4 /* qoswallet */,
+				D241BDFA217050AD00E00FA4 /* qoswalletTests */,
+				D241BE05217050AD00E00FA4 /* qoswalletUITests */,
 				D241BDE4217050AD00E00FA4 /* Products */,
-				ADE9EF00A9A36F18DB12A347 /* Pods */,
-				F4D2C87E1F8FDDC91C75B1BD /* Frameworks */,
+				EBC38683420B76A7719A0A4C /* Pods */,
+				AD588629FD1A5AD83C38D5C8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		D241BDE4217050AD00E00FA4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D241BDE3217050AD00E00FA4 /* NativeEmbedRN.app */,
-				D241BDF7217050AD00E00FA4 /* NativeEmbedRNTests.xctest */,
-				D241BE02217050AD00E00FA4 /* NativeEmbedRNUITests.xctest */,
+				D241BDE3217050AD00E00FA4 /* qoswallet.app */,
+				D241BDF7217050AD00E00FA4 /* qoswalletTests.xctest */,
+				D241BE02217050AD00E00FA4 /* qoswalletUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D241BDE5217050AD00E00FA4 /* NativeEmbedRN */ = {
+		D241BDE5217050AD00E00FA4 /* qoswallet */ = {
 			isa = PBXGroup;
 			children = (
 				D241BDE6217050AD00E00FA4 /* AppDelegate.swift */,
 				D241BDE8217050AD00E00FA4 /* ViewController.swift */,
 				D24253E62170B61700A6AE94 /* ReactViewController.swift */,
-				D24253EC217431B400A6AE94 /* IOSIntentModule.m */,
-				D24253EA217431B400A6AE94 /* NativeEmbedRN-Bridging-Header.h */,
-				D24253F0217439CF00A6AE94 /* IOSIntentModule.swift */,
+				D22AA12F2176DE6C0079DD39 /* Common.swift */,
+				D24253EC217431B400A6AE94 /* RNBridgeModule.m */,
+				D24253F0217439CF00A6AE94 /* RNBridgeModule.swift */,
 				D24253F22174BFE400A6AE94 /* ReactNativeBridge.swift */,
+				D24253EA217431B400A6AE94 /* qoswallet-Bridging-Header.h */,
 				D241BDEA217050AD00E00FA4 /* Main.storyboard */,
 				D241BDED217050AD00E00FA4 /* Assets.xcassets */,
 				D241BDEF217050AD00E00FA4 /* LaunchScreen.storyboard */,
 				D241BDF2217050AD00E00FA4 /* Info.plist */,
 			);
-			path = NativeEmbedRN;
+			path = qoswallet;
 			sourceTree = "<group>";
 		};
-		D241BDFA217050AD00E00FA4 /* NativeEmbedRNTests */ = {
+		D241BDFA217050AD00E00FA4 /* qoswalletTests */ = {
 			isa = PBXGroup;
 			children = (
-				D241BDFB217050AD00E00FA4 /* NativeEmbedRNTests.swift */,
+				D241BDFB217050AD00E00FA4 /* qoswalletTests.swift */,
 				D241BDFD217050AD00E00FA4 /* Info.plist */,
 			);
-			path = NativeEmbedRNTests;
+			path = qoswalletTests;
 			sourceTree = "<group>";
 		};
-		D241BE05217050AD00E00FA4 /* NativeEmbedRNUITests */ = {
+		D241BE05217050AD00E00FA4 /* qoswalletUITests */ = {
 			isa = PBXGroup;
 			children = (
-				D241BE06217050AD00E00FA4 /* NativeEmbedRNUITests.swift */,
+				D241BE06217050AD00E00FA4 /* qoswalletUITests.swift */,
 				D241BE08217050AD00E00FA4 /* Info.plist */,
 			);
-			path = NativeEmbedRNUITests;
+			path = qoswalletUITests;
 			sourceTree = "<group>";
 		};
-		F4D2C87E1F8FDDC91C75B1BD /* Frameworks */ = {
+		EBC38683420B76A7719A0A4C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				D056A84399803C3E87517BC0 /* Pods_NativeEmbedRN.framework */,
-				8303E54535B0D37D776395C5 /* Pods_NativeEmbedRNTests.framework */,
-				A6DC2061D644AECCC86FF3ED /* Pods_NativeEmbedRNUITests.framework */,
+				C0CD0AFA62301ED9A95891F7 /* Pods-NativeEmbedRN.debug.xcconfig */,
+				6D7072DE687B6B08D7AE200D /* Pods-NativeEmbedRN.release.xcconfig */,
+				6856E3AD6EAAF812C936E5B8 /* Pods-NativeEmbedRNTests.debug.xcconfig */,
+				D0F0ABB91BA9B78A289C448F /* Pods-NativeEmbedRNTests.release.xcconfig */,
+				2AB3C10C1CE33AF568085535 /* Pods-NativeEmbedRNUITests.debug.xcconfig */,
+				EFE1708FCB8AA772C7AA32BD /* Pods-NativeEmbedRNUITests.release.xcconfig */,
+				F152C61291997495F9105600 /* Pods-qoswallet.debug.xcconfig */,
+				4C6FC32C7F63641CD2C830AF /* Pods-qoswallet.release.xcconfig */,
+				91FF521AF3E167A34E62631E /* Pods-qoswalletTests.debug.xcconfig */,
+				16B8374F46924D2656DAEAB3 /* Pods-qoswalletTests.release.xcconfig */,
+				E80D2F4425670150E1C0FACC /* Pods-qoswalletUITests.debug.xcconfig */,
+				017ECE414B1BBD27CE16E2AB /* Pods-qoswalletUITests.release.xcconfig */,
 			);
-			name = Frameworks;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D241BDE2217050AD00E00FA4 /* NativeEmbedRN */ = {
+		D241BDE2217050AD00E00FA4 /* qoswallet */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D241BE0B217050AD00E00FA4 /* Build configuration list for PBXNativeTarget "NativeEmbedRN" */;
+			buildConfigurationList = D241BE0B217050AD00E00FA4 /* Build configuration list for PBXNativeTarget "qoswallet" */;
 			buildPhases = (
-				7F0A0D7173065CEDA9C9C88E /* [CP] Check Pods Manifest.lock */,
+				1942067FA987AF58F56216A4 /* [CP] Check Pods Manifest.lock */,
 				D241BDDF217050AD00E00FA4 /* Sources */,
 				D241BDE0217050AD00E00FA4 /* Frameworks */,
 				D241BDE1217050AD00E00FA4 /* Resources */,
-				CD91181BB5D6E398004C5DC3 /* [CP] Embed Pods Frameworks */,
-				0DF4342CDA7D2BDE420C4D04 /* [CP] Copy Pods Resources */,
+				BB16483CF2776741D0DC7C9C /* [CP] Embed Pods Frameworks */,
+				450B70907FA0929F8642532C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = NativeEmbedRN;
+			name = qoswallet;
 			productName = NativeEmbedRN;
-			productReference = D241BDE3217050AD00E00FA4 /* NativeEmbedRN.app */;
+			productReference = D241BDE3217050AD00E00FA4 /* qoswallet.app */;
 			productType = "com.apple.product-type.application";
 		};
-		D241BDF6217050AD00E00FA4 /* NativeEmbedRNTests */ = {
+		D241BDF6217050AD00E00FA4 /* qoswalletTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D241BE0E217050AD00E00FA4 /* Build configuration list for PBXNativeTarget "NativeEmbedRNTests" */;
+			buildConfigurationList = D241BE0E217050AD00E00FA4 /* Build configuration list for PBXNativeTarget "qoswalletTests" */;
 			buildPhases = (
-				126FC8C67876B6B1F2CD0929 /* [CP] Check Pods Manifest.lock */,
+				B679BBE26F626572481AAD6A /* [CP] Check Pods Manifest.lock */,
 				D241BDF3217050AD00E00FA4 /* Sources */,
 				D241BDF4217050AD00E00FA4 /* Frameworks */,
 				D241BDF5217050AD00E00FA4 /* Resources */,
-				D801C1BFCB31B381E825ECF3 /* [CP] Embed Pods Frameworks */,
-				E193C782FDDAE239A6192463 /* [CP] Copy Pods Resources */,
+				A117F679D66ED60F3A1C62AB /* [CP] Embed Pods Frameworks */,
+				1C887F4CF0A42A398C259BFF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				D241BDF9217050AD00E00FA4 /* PBXTargetDependency */,
 			);
-			name = NativeEmbedRNTests;
+			name = qoswalletTests;
 			productName = NativeEmbedRNTests;
-			productReference = D241BDF7217050AD00E00FA4 /* NativeEmbedRNTests.xctest */;
+			productReference = D241BDF7217050AD00E00FA4 /* qoswalletTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		D241BE01217050AD00E00FA4 /* NativeEmbedRNUITests */ = {
+		D241BE01217050AD00E00FA4 /* qoswalletUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D241BE11217050AD00E00FA4 /* Build configuration list for PBXNativeTarget "NativeEmbedRNUITests" */;
+			buildConfigurationList = D241BE11217050AD00E00FA4 /* Build configuration list for PBXNativeTarget "qoswalletUITests" */;
 			buildPhases = (
-				86DED69CBD97A60EB43F31CD /* [CP] Check Pods Manifest.lock */,
+				1E232A0041B1274A4BE7BE58 /* [CP] Check Pods Manifest.lock */,
 				D241BDFE217050AD00E00FA4 /* Sources */,
 				D241BDFF217050AD00E00FA4 /* Frameworks */,
 				D241BE00217050AD00E00FA4 /* Resources */,
-				5C9104BFA6807FD74DEB57BE /* [CP] Embed Pods Frameworks */,
-				529615C9FCDCCC3B55117E87 /* [CP] Copy Pods Resources */,
+				1DC6E141AA83C90CB05AA436 /* [CP] Embed Pods Frameworks */,
+				C3A80BC58F03462B75A328B7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				D241BE04217050AD00E00FA4 /* PBXTargetDependency */,
 			);
-			name = NativeEmbedRNUITests;
+			name = qoswalletUITests;
 			productName = NativeEmbedRNUITests;
-			productReference = D241BE02217050AD00E00FA4 /* NativeEmbedRNUITests.xctest */;
+			productReference = D241BE02217050AD00E00FA4 /* qoswalletUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -271,7 +286,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D241BDDE217050AD00E00FA4 /* Build configuration list for PBXProject "NativeEmbedRN" */;
+			buildConfigurationList = D241BDDE217050AD00E00FA4 /* Build configuration list for PBXProject "qoswallet" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -284,9 +299,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D241BDE2217050AD00E00FA4 /* NativeEmbedRN */,
-				D241BDF6217050AD00E00FA4 /* NativeEmbedRNTests */,
-				D241BE01217050AD00E00FA4 /* NativeEmbedRNUITests */,
+				D241BDE2217050AD00E00FA4 /* qoswallet */,
+				D241BDF6217050AD00E00FA4 /* qoswalletTests */,
+				D241BE01217050AD00E00FA4 /* qoswalletUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -319,22 +334,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0DF4342CDA7D2BDE420C4D04 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NativeEmbedRN/Pods-NativeEmbedRN-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		126FC8C67876B6B1F2CD0929 /* [CP] Check Pods Manifest.lock */ = {
+		1942067FA987AF58F56216A4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -345,14 +345,14 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-NativeEmbedRNTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-qoswallet-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		529615C9FCDCCC3B55117E87 /* [CP] Copy Pods Resources */ = {
+		1C887F4CF0A42A398C259BFF /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -364,10 +364,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NativeEmbedRNUITests/Pods-NativeEmbedRNUITests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-qoswalletTests/Pods-qoswalletTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5C9104BFA6807FD74DEB57BE /* [CP] Embed Pods Frameworks */ = {
+		1DC6E141AA83C90CB05AA436 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -379,10 +379,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NativeEmbedRNUITests/Pods-NativeEmbedRNUITests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-qoswalletUITests/Pods-qoswalletUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7F0A0D7173065CEDA9C9C88E /* [CP] Check Pods Manifest.lock */ = {
+		1E232A0041B1274A4BE7BE58 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -393,14 +393,44 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-NativeEmbedRN-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-qoswalletUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		86DED69CBD97A60EB43F31CD /* [CP] Check Pods Manifest.lock */ = {
+		450B70907FA0929F8642532C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-qoswallet/Pods-qoswallet-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A117F679D66ED60F3A1C62AB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-qoswalletTests/Pods-qoswalletTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B679BBE26F626572481AAD6A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -411,20 +441,20 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-NativeEmbedRNUITests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-qoswalletTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		CD91181BB5D6E398004C5DC3 /* [CP] Embed Pods Frameworks */ = {
+		BB16483CF2776741D0DC7C9C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-NativeEmbedRN/Pods-NativeEmbedRN-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-qoswallet/Pods-qoswallet-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/DoubleConversion/DoubleConversion.framework",
 				"${BUILT_PRODUCTS_DIR}/Folly/folly.framework",
@@ -445,25 +475,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NativeEmbedRN/Pods-NativeEmbedRN-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-qoswallet/Pods-qoswallet-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D801C1BFCB31B381E825ECF3 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NativeEmbedRNTests/Pods-NativeEmbedRNTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E193C782FDDAE239A6192463 /* [CP] Copy Pods Resources */ = {
+		C3A80BC58F03462B75A328B7 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -475,7 +490,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NativeEmbedRNTests/Pods-NativeEmbedRNTests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-qoswalletUITests/Pods-qoswalletUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -487,10 +502,11 @@
 			files = (
 				D241BDE9217050AD00E00FA4 /* ViewController.swift in Sources */,
 				D24253F32174BFE400A6AE94 /* ReactNativeBridge.swift in Sources */,
-				D24253ED217431B400A6AE94 /* IOSIntentModule.m in Sources */,
+				D24253ED217431B400A6AE94 /* RNBridgeModule.m in Sources */,
 				D241BDE7217050AD00E00FA4 /* AppDelegate.swift in Sources */,
 				D24253E72170B61700A6AE94 /* ReactViewController.swift in Sources */,
-				D24253F1217439CF00A6AE94 /* IOSIntentModule.swift in Sources */,
+				D24253F1217439CF00A6AE94 /* RNBridgeModule.swift in Sources */,
+				D22AA1302176DE6C0079DD39 /* Common.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,7 +514,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D241BDFC217050AD00E00FA4 /* NativeEmbedRNTests.swift in Sources */,
+				D241BDFC217050AD00E00FA4 /* qoswalletTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -506,7 +522,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D241BE07217050AD00E00FA4 /* NativeEmbedRNUITests.swift in Sources */,
+				D241BE07217050AD00E00FA4 /* qoswalletUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -515,12 +531,12 @@
 /* Begin PBXTargetDependency section */
 		D241BDF9217050AD00E00FA4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D241BDE2217050AD00E00FA4 /* NativeEmbedRN */;
+			target = D241BDE2217050AD00E00FA4 /* qoswallet */;
 			targetProxy = D241BDF8217050AD00E00FA4 /* PBXContainerItemProxy */;
 		};
 		D241BE04217050AD00E00FA4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D241BDE2217050AD00E00FA4 /* NativeEmbedRN */;
+			target = D241BDE2217050AD00E00FA4 /* qoswallet */;
 			targetProxy = D241BE03217050AD00E00FA4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -654,18 +670,19 @@
 		};
 		D241BE0C217050AD00E00FA4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 24DB833EB8599DB0929D3E59 /* Pods-NativeEmbedRN.debug.xcconfig */;
+			baseConfigurationReference = F152C61291997495F9105600 /* Pods-qoswallet.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T48726X4KQ;
-				INFOPLIST_FILE = NativeEmbedRN/Info.plist;
+				INFOPLIST_FILE = qoswallet/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = qos.NativeEmbedRN;
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" \"-DDEBUG\" \"-DFOO\"";
+				PRODUCT_BUNDLE_IDENTIFIER = qos.qoswallet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "NativeEmbedRN/NativeEmbedRN-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "qoswallet/qoswallet-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -674,18 +691,19 @@
 		};
 		D241BE0D217050AD00E00FA4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FD7C9B311E0391A34459F077 /* Pods-NativeEmbedRN.release.xcconfig */;
+			baseConfigurationReference = 4C6FC32C7F63641CD2C830AF /* Pods-qoswallet.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T48726X4KQ;
-				INFOPLIST_FILE = NativeEmbedRN/Info.plist;
+				INFOPLIST_FILE = qoswallet/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = qos.NativeEmbedRN;
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" \"-DDEBUG\" \"-DFOO\"";
+				PRODUCT_BUNDLE_IDENTIFIER = qos.qoswallet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "NativeEmbedRN/NativeEmbedRN-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "qoswallet/qoswallet-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -693,74 +711,74 @@
 		};
 		D241BE0F217050AD00E00FA4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 08E1D5758402C3EDC92DEBB7 /* Pods-NativeEmbedRNTests.debug.xcconfig */;
+			baseConfigurationReference = 91FF521AF3E167A34E62631E /* Pods-qoswalletTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = NativeEmbedRNTests/Info.plist;
+				INFOPLIST_FILE = qoswalletTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = qos.NativeEmbedRNTests;
+				PRODUCT_BUNDLE_IDENTIFIER = qos.qoswalletTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NativeEmbedRN.app/NativeEmbedRN";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/qoswallet.app/qoswallet";
 			};
 			name = Debug;
 		};
 		D241BE10217050AD00E00FA4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CCA90CABE64EAD0807980F31 /* Pods-NativeEmbedRNTests.release.xcconfig */;
+			baseConfigurationReference = 16B8374F46924D2656DAEAB3 /* Pods-qoswalletTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = NativeEmbedRNTests/Info.plist;
+				INFOPLIST_FILE = qoswalletTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = qos.NativeEmbedRNTests;
+				PRODUCT_BUNDLE_IDENTIFIER = qos.qoswalletTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NativeEmbedRN.app/NativeEmbedRN";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/qoswallet.app/qoswallet";
 			};
 			name = Release;
 		};
 		D241BE12217050AD00E00FA4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 870CA817C5FCB4E5079BAAEE /* Pods-NativeEmbedRNUITests.debug.xcconfig */;
+			baseConfigurationReference = E80D2F4425670150E1C0FACC /* Pods-qoswalletUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = NativeEmbedRNUITests/Info.plist;
+				INFOPLIST_FILE = qoswalletUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = qos.NativeEmbedRNUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = qos.qoswalletUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = NativeEmbedRN;
+				TEST_TARGET_NAME = qoswallet;
 			};
 			name = Debug;
 		};
 		D241BE13217050AD00E00FA4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CF0A2D91852AFA38A7FC3770 /* Pods-NativeEmbedRNUITests.release.xcconfig */;
+			baseConfigurationReference = 017ECE414B1BBD27CE16E2AB /* Pods-qoswalletUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = NativeEmbedRNUITests/Info.plist;
+				INFOPLIST_FILE = qoswalletUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = qos.NativeEmbedRNUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = qos.qoswalletUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = NativeEmbedRN;
+				TEST_TARGET_NAME = qoswallet;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D241BDDE217050AD00E00FA4 /* Build configuration list for PBXProject "NativeEmbedRN" */ = {
+		D241BDDE217050AD00E00FA4 /* Build configuration list for PBXProject "qoswallet" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D241BE09217050AD00E00FA4 /* Debug */,
@@ -769,7 +787,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D241BE0B217050AD00E00FA4 /* Build configuration list for PBXNativeTarget "NativeEmbedRN" */ = {
+		D241BE0B217050AD00E00FA4 /* Build configuration list for PBXNativeTarget "qoswallet" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D241BE0C217050AD00E00FA4 /* Debug */,
@@ -778,7 +796,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D241BE0E217050AD00E00FA4 /* Build configuration list for PBXNativeTarget "NativeEmbedRNTests" */ = {
+		D241BE0E217050AD00E00FA4 /* Build configuration list for PBXNativeTarget "qoswalletTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D241BE0F217050AD00E00FA4 /* Debug */,
@@ -787,7 +805,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D241BE11217050AD00E00FA4 /* Build configuration list for PBXNativeTarget "NativeEmbedRNUITests" */ = {
+		D241BE11217050AD00E00FA4 /* Build configuration list for PBXNativeTarget "qoswalletUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D241BE12217050AD00E00FA4 /* Debug */,

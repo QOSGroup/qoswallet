@@ -1,6 +1,6 @@
 //
-//  IOSIntentModule.swift
-//  NativeEmbedRN
+//  RNBridgeModule.swift
+//  qoswallet
 //
 //  Created by Wanghao on 2018/10/15.
 //  Copyright © 2018年 qos. All rights reserved.
