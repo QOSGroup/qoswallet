@@ -1,7 +1,7 @@
 import React from 'react'
-import { StyleSheet, Text, View, Button } from 'react-native'
-// import LogoTitle from '../components/home/headerTitle'
-// import HeaderLeft from '../components/home/headerLeft'
+import { StyleSheet, Text, View, Button, Alert } from 'react-native'
+import LogoTitle from '../components/home/headerTitle'
+import HeaderLeft from '../components/home/headerLeft'
 
 import Component from '../components/base'
 
@@ -12,16 +12,16 @@ export default class SettingsScreen extends Component {
 
     static navigationOptions = () => {
         return {
-            header:null,
-            // headerLeft: <HeaderLeft />,
-            // headerTitle: <LogoTitle />,
-            // headerRight: (
-            //     <Button
-            //         onPress={() => Alert.alert('欢迎使用QOS-RN应用')}
-            //         title="关于"
-            //         color="#fff"
-            //     />
-            // ),
+            // header:null,
+            headerLeft: <HeaderLeft />,
+            headerTitle: <LogoTitle />,
+            headerRight: (
+                <Button
+                    onPress={() => Alert.alert('欢迎使用QOS-RN应用')}
+                    title="关于"
+                    color="#fff"
+                />
+            ),
         }
     }
 
@@ -42,9 +42,9 @@ export default class SettingsScreen extends Component {
                     accessibilityLabel="Go back to Native"
                 />
                 <Button
-                    title="Go to Details"
+                    title="Go to SettingsDetails"
                     onPress={() =>
-                        this.props.navigation.navigate('Details', {
+                        this.props.navigation.navigate('SettingsDetails', {
                             itemId: 86,
                             otherParam: 'anything you want here',
                         })}
