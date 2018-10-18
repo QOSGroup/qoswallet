@@ -10,6 +10,11 @@ module.exports = {
         "require": true
     },
     "parser": "babel-eslint",
+    "env": {
+        "browser": true,
+        "node": true,
+        "es6": true
+    },
     "rules": {
         "max-len": ["error", 120],
         'quotes': [2, 'single', {
@@ -19,6 +24,7 @@ module.exports = {
         "no-console": 0,
         "react/forbid-prop-types": [0, { "forbid": ["any", "array", "object"] }],
         "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-        "react/prop-types": ["error", { "ignore": ["navigation"] }]
+        "react/prop-types": ["error", { "ignore": ["navigation"] }],
+        // "react/display-name": [2],
     }
 }

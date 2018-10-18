@@ -1,33 +1,34 @@
 import React from 'react'
-import { StyleSheet, Text, View, Button, Alert } from 'react-native'
-import LogoTitle from '../components/home/headerTitle'
-import HeaderLeft from '../components/home/headerLeft'
+import { StyleSheet, Text, View, Button } from 'react-native'
+// import LogoTitle from '../components/home/headerTitle'
+// import HeaderLeft from '../components/home/headerLeft'
 
 import Component from '../components/base'
 
-export default class HomeScreen extends Component {
+export default class SettingsScreen extends Component {
     constructor(props) {
         super(props)
     }
 
     static navigationOptions = () => {
         return {
-            headerLeft: <HeaderLeft />,
-            headerTitle: <LogoTitle />,
-            headerRight: (
-                <Button
-                    onPress={() => Alert.alert('欢迎使用QOS-RN应用')}
-                    title="关于"
-                    color="#fff"
-                />
-            ),
+            header:null,
+            // headerLeft: <HeaderLeft />,
+            // headerTitle: <LogoTitle />,
+            // headerRight: (
+            //     <Button
+            //         onPress={() => Alert.alert('欢迎使用QOS-RN应用')}
+            //         title="关于"
+            //         color="#fff"
+            //     />
+            // ),
         }
     }
 
     render() {
         const contents = (
             <Text>
-                您已进入RN应用
+                您已进入Setting
             </Text>
         )
         return (
