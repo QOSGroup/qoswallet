@@ -13,9 +13,14 @@ let RN_SOURCE_URL_LOCAL = "http://localhost:8081/index.bundle?platform=ios"
 
 let documentPath = NSHomeDirectory() + "/Documents"
 
-let sourcePath = documentPath + "/ios/index.ios.jsbundle"
+var sourcePath = documentPath + "/ios/index.ios.jsbundle"
 
 let baseServerUrl = "http://192.168.168.46:9000/"
 
 //request
 let configure = "apps.json"
+
+// 屏幕宽度
+let kScreenW = UIScreen.main.bounds.width
+// 屏幕高度
+let kScreenH = UIScreen.main.bounds.height

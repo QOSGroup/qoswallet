@@ -23,51 +23,46 @@ class ViewController: UIViewController {
     //暂停下载,保存已下载的部分
     private var cancelledData : Data?
     //下载路径
-    private var downloadUrl = baseServerUrl + "ios.starcloud.zip"
+    private var downloadUrl: String?
     //解压文件名
     private var fileName: String?
     //读取配置文件
     private var configureData: NSArray?
+    //当前配置
+    private var currentConfigure: NSDictionary?
+    //module名
+    private var muduleName: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
         requestConfigure()
-        
-        let btn1 = UIButton.init()
-        btn1.frame = CGRect.init(x: 0, y: 0, width: 60, height: 30)
-        btn1.tag = 1
-        btn1.center = self.view.center
-        btn1.setTitle("星云", for: .normal)
-        btn1.titleLabel?.font = UIFont.systemFont(ofSize: 16)
-        btn1.setTitleColor(UIColor.blue, for: .normal)
-        
-        let btn2 = UIButton.init()
-        btn2.frame = CGRect.init(x: btn1.frame.origin.x, y: btn1.frame.origin.y + btn1.frame.size.height + 40, width: 60, height: 30)
-        btn1.tag = 2
-        btn2.setTitle("下载", for: .normal)
-        btn2.titleLabel?.font = UIFont.systemFont(ofSize: 16)
-        btn2.setTitleColor(UIColor.blue, for: .normal)
-        
-        btn1.addTarget(self, action: #selector(touchBtn(btn:)), for: .touchUpInside)
-        btn2.addTarget(self, action: #selector(touchBtn(btn:)), for: .touchUpInside)
-        
-        view.addSubview(btn1)
-        view.addSubview(btn2)
-        
-        progressBar = UIProgressView.init(frame: CGRect.init(x: 0, y: 28, width: 60, height: 2))
-        progressBar.alpha = 0.5
-        progressBar.progressViewStyle = .default
-        progressBar.backgroundColor = .lightGray
-        btn2.addSubview(progressBar)
     }
     
-//    func initUI() {
-//        for i in 0...self.configureData?.count {
-//
-//        }
-//    }
+    func initUI() {
+        
+        for (index, value) in (configureData?.enumerated())! {
+            let dic = value as! NSDictionary
+
+            let btn1 = UIButton.init()
+            btn1.frame = CGRect.init(x: Int((kScreenW-100)/2), y: 200+index*60, width: 100, height: 30)
+            btn1.tag = index
+            btn1.setTitle((dic.object(forKey: "title") as! String), for: .normal)
+            btn1.titleLabel?.font = UIFont.systemFont(ofSize: 16)
+            btn1.setTitleColor(UIColor.blue, for: .normal)
+            btn1.addTarget(self, action: #selector(touchBtn(btn:)), for: .touchUpInside)
+            view.addSubview(btn1)
+            
+            let progressBar = UIProgressView.init(frame: CGRect.init(x: 20, y: 28, width: 60, height: 2))
+            progressBar.tag = 100
+            progressBar.alpha = 0.5
+            progressBar.progressViewStyle = .default
+            progressBar.backgroundColor = .lightGray
+            btn1.addSubview(progressBar)
+        }
+        
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -75,7 +70,14 @@ class ViewController: UIViewController {
     }
     
     @objc func touchBtn(btn: UIButton) {
-        if FileManager.default.fileExists(atPath: sourcePath) {
+        self.currentConfigure = (self.configureData?.object(at: btn.tag) as! NSDictionary)
+        let fileName = (self.currentConfigure!["url"] as! NSString).lastPathComponent
+        let filePath = documentPath + "/ios/" + fileName
+        sourcePath = filePath
+        self.muduleName = self.currentConfigure?["name"] as? String
+        self.progressBar = (btn.viewWithTag(100) as! UIProgressView)
+        self.downloadUrl = self.currentConfigure?["url"] as? String
+        if FileManager.default.fileExists(atPath: filePath) {
             loadRNRootView()
         } else {
             downloadJSBundle()
@@ -83,16 +85,15 @@ class ViewController: UIViewController {
     }
     
     func loadRNRootView() {
-        if reactNativeBridge == nil {
-            reactNativeBridge = ReactNativeBridge()
-        }
-        let vc = ReactViewController(moduleName: "RNHighScores", bridge: reactNativeBridge!.bridge)
+        reactNativeBridge = nil
+        reactNativeBridge = ReactNativeBridge()
+        let vc = ReactViewController(moduleName: self.muduleName!, bridge: reactNativeBridge!.bridge)
         self.present(vc, animated: true, completion: nil)
     }
     
     func downloadJSBundle() {
         //下载的进度条显示
-        Alamofire.download(downloadUrl).downloadProgress(queue: DispatchQueue.main) { (progress) in
+        Alamofire.download(self.downloadUrl!).downloadProgress(queue: DispatchQueue.main) { (progress) in
             self.progressBar.setProgress(Float(progress.fractionCompleted), animated: true)//下载进度条
         }
         
@@ -105,7 +106,7 @@ class ViewController: UIViewController {
             return (fileUrl!,[.removePreviousFile, .createIntermediateDirectories] )
         }
         
-        self.downloadRequest = Alamofire.download(downloadUrl, to: self.destination)
+        self.downloadRequest = Alamofire.download(self.downloadUrl!, to: self.destination)
         
         self.downloadRequest.responseData(completionHandler: downloadResponse)
     }
@@ -137,6 +138,7 @@ class ViewController: UIViewController {
                 print("请求成功")
                 print(response.result.value as Any)
                 self.configureData = (response.result.value as! NSArray)
+                self.initUI()
             }else{
                 print("请求失败\(String(describing: response.error))")
             }
