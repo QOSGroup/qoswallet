@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>name</key>
+    <string>qosexample</string>
+    <key>title</key>
+    <string>QOSExample</string>
+    <key>description</key>
+    <string>休闲应用</string>
+    <key>url</key>
+    <string>http://localhost:8081/index.bundle?platform=ios</string>
+    <key>version</key>
+    <string>0.0.1</string>
+    <key>walletVersion</key>
+    <string>0.0.1</string>
+</dict>
+</plist>

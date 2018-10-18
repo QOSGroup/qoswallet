@@ -11,9 +11,9 @@ import UIKit
 //加载RN源URL
 let RN_SOURCE_URL_LOCAL = "http://localhost:8081/index.bundle?platform=ios"
 
-let documentPath = NSHomeDirectory() + "/Documents"
+let documentPath = NSHomeDirectory() + "/Documents/"
 
-var sourcePath = documentPath + "/ios/index.ios.jsbundle"
+var sourcePath = documentPath + "ios/index.ios.jsbundle"
 
 let baseServerUrl = "http://192.168.168.46:9000/"
 
