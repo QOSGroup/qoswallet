@@ -1,6 +1,6 @@
 //
 //  ReactNativeBridge.swift
-//  NativeEmbedRN
+//  qoswallet
 //
 //  Created by Wanghao on 2018/10/15.
 //  Copyright © 2018年 qos. All rights reserved.
@@ -20,6 +20,10 @@ class ReactNativeBridge {
 class ReactNativeBridgeDelegate: NSObject, RCTBridgeDelegate {
     
     func sourceURL(for bridge: RCTBridge!) -> URL! {
-        return URL(string: "http://localhost:8081/index.bundle?platform=ios")
+    #if DEBUG
+        return URL(string: RN_SOURCE_URL_LOCAL)
+    #else
+        return URL(string: sourcePath)
+    #endif
     }
 }
