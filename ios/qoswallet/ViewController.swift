@@ -30,8 +30,8 @@ class ViewController: UIViewController {
     private var configureData: NSArray?
     //当前配置
     private var currentConfigure: NSDictionary?
-    //module名
-    private var muduleName: String?
+    //moduleName名
+    private var moduleName: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,10 +73,10 @@ class ViewController: UIViewController {
         self.currentConfigure = (self.configureData?.object(at: btn.tag) as! NSDictionary)
         let fileName = (self.currentConfigure!["url"] as! NSString).lastPathComponent
         let filePath = documentPath + "/ios/" + fileName
-        sourcePath = filePath
-        self.muduleName = self.currentConfigure?["name"] as? String
+        self.moduleName = self.currentConfigure?["name"] as? String
         self.progressBar = (btn.viewWithTag(100) as! UIProgressView)
         self.downloadUrl = self.currentConfigure?["url"] as? String
+        loadSourcePath(fileName: fileName)
         if FileManager.default.fileExists(atPath: filePath) {
             loadRNRootView()
         } else {
@@ -84,10 +84,15 @@ class ViewController: UIViewController {
         }
     }
     
+    func loadSourcePath(fileName: String) {
+        let a = fileName as NSString?
+        sourcePath = documentPath + "/" + (a?.deletingPathExtension)! + "/index.ios.jsbundle"
+    }
+    
     func loadRNRootView() {
         reactNativeBridge = nil
         reactNativeBridge = ReactNativeBridge()
-        let vc = ReactViewController(moduleName: self.muduleName!, bridge: reactNativeBridge!.bridge)
+        let vc = ReactViewController(moduleName: self.moduleName!, bridge: reactNativeBridge!.bridge)
         self.present(vc, animated: true, completion: nil)
     }
     
@@ -117,7 +122,6 @@ class ViewController: UIViewController {
         case .success:
             print("下载完成")
             //解压
-            let documentPath = NSHomeDirectory() + "/Documents"
             let sourcePath = documentPath + "/" + self.fileName!
             let isSuccess = SSZipArchive.unzipFile(atPath: sourcePath, toDestination: documentPath)
             print("解压结果:\(isSuccess)")
