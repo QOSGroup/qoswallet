@@ -2,7 +2,7 @@ import React from 'react'
 import { Text, View, Button } from 'react-native'
 import Component from '../components/base'
 
-export default class DetailsScreen extends Component {
+export default class SettingDetailsScreen extends Component {
     static navigationOptions = ({ navigation, navigationOptions }) => {
         return {
             title: navigation.getParam('otherParam', 'A Nested Details Screen'),
@@ -26,15 +26,11 @@ export default class DetailsScreen extends Component {
                 <Text>otherParam: {JSON.stringify(otherParam)}</Text>
                 <Button
                     title="Go to Details... again"
-                    onPress={() => this.props.navigation.push('Details')}
+                    onPress={() => this.props.navigation.push('SettingsDetails')}
                 />
                 <Button
                     title="Update the title"
                     onPress={() => this.props.navigation.setParams({ otherParam: 'Updated!' })}
-                />
-                <Button
-                    onPress={() => this.props.navigation.navigate('AboutModal')}
-                    title="AboutModal"
                 />
                 <Button
                     title="Go back"

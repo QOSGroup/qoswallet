@@ -5,9 +5,7 @@ import HomeScreen from './pages/home'
 import DetailsScreen from './pages/detail'
 import AboutModal from './modals/about'
 import Settings from './pages/setting'
-
-// import tStack from './pages/test'
-
+import SettingDetailsScreen from './pages/settingdetail'
 
 const MainStack = createStackNavigator(
 	{
@@ -25,14 +23,14 @@ const MainStack = createStackNavigator(
 				fontWeight: 'bold',
 			},
 			headerBackTitle: null
-		},
-	},
-);
+		}
+	}
+)
 
 const SettingStack = createStackNavigator(
 	{
 		Settings: Settings,
-		SettingsDetails: DetailsScreen,
+		SettingsDetails: SettingDetailsScreen,
 	},
 	{
 		initialRouteName: 'Settings',
@@ -44,15 +42,51 @@ const SettingStack = createStackNavigator(
 			headerTitleStyle: {
 				fontWeight: 'bold',
 			},
-			headerBackTitle: null
+			headerBackTitle: null,
 		},
 	},
 );
 
+// createBottomTabNavigator
 const TabStack = createBottomTabNavigator(
 	{
-		Main: MainStack,
-		Settings: SettingStack,
+		TabMain: {
+			screen: MainStack,
+			navigationOptions: ({ navigation }) => {
+				let tabBarVisible = true;
+				if (navigation.state.index > 0) {
+					tabBarVisible = false;
+				}
+
+				return {
+					tabBarOnPress: (value) => {
+						const { routeName } = navigation.state;
+						value.defaultHandler();
+						console.log(routeName)
+					},
+					tabBarLabel: '首页',
+					tabBarVisible,
+				}
+			}
+		},
+		Settings: {
+			screen: SettingStack,
+			navigationOptions: ({ navigation }) => ({
+				tabBarOnPress: (value) => {
+					const { routeName } = navigation.state;
+					value.defaultHandler();
+					console.log(routeName)
+				},
+				tabBarLabel: '设置',
+			})
+		},
+	}, {
+		navigationOptions: () => ({
+			tabBarIcon: () => {
+				// const { routeName } = navigation.state;		
+			}
+		}),
+		// swipeEnabled: true
 	}
 )
 
