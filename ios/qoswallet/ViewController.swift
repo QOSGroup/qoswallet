@@ -32,12 +32,22 @@ class ViewController: UIViewController {
     private var currentConfigure: NSDictionary?
     //moduleName名
     private var moduleName: String?
+    //读取本地配置文件
+    private var loaclConfigureData: NSDictionary?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+        #if DEBUG
+        loadLocalModuleConfigure()
+        #else
         requestConfigure()
+        #endif
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
     
     func initUI() {
@@ -61,18 +71,27 @@ class ViewController: UIViewController {
             progressBar.backgroundColor = .lightGray
             btn1.addSubview(progressBar)
         }
-        
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func initLoacalUI() {
+        let btn1 = UIButton.init()
+        btn1.frame = CGRect.init(x: Int((kScreenW-100)/2), y: 200, width: 100, height: 30)
+        btn1.tag = 100
+        btn1.setTitle(self.loaclConfigureData!["title"] as? String, for: .normal)
+        btn1.titleLabel?.font = UIFont.systemFont(ofSize: 16)
+        btn1.setTitleColor(UIColor.blue, for: .normal)
+        btn1.addTarget(self, action: #selector(touchBtn(btn:)), for: .touchUpInside)
+        view.addSubview(btn1)
     }
     
     @objc func touchBtn(btn: UIButton) {
+        if btn.tag == 100 {
+            loadRNRootView()
+            return
+        }
         self.currentConfigure = (self.configureData?.object(at: btn.tag) as! NSDictionary)
         let fileName = (self.currentConfigure!["url"] as! NSString).lastPathComponent
-        let filePath = documentPath + "/ios/" + fileName
+        let filePath = documentPath + (fileName as NSString?)!.deletingPathExtension
         self.moduleName = self.currentConfigure?["name"] as? String
         self.progressBar = (btn.viewWithTag(100) as! UIProgressView)
         self.downloadUrl = self.currentConfigure?["url"] as? String
@@ -84,14 +103,27 @@ class ViewController: UIViewController {
         }
     }
     
+    func loadLocalModuleConfigure() {
+        let plistPath = Bundle.main.path(forResource: "localModuleConfig", ofType: "plist")
+        self.loaclConfigureData = NSDictionary.init(contentsOfFile: plistPath!)
+        self.moduleName = self.loaclConfigureData!["name"] as? String
+        initLoacalUI()
+    }
+    
     func loadSourcePath(fileName: String) {
         let a = fileName as NSString?
-        sourcePath = documentPath + "/" + (a?.deletingPathExtension)! + "/index.ios.jsbundle"
+        sourcePath = documentPath + (a?.deletingPathExtension)! + "/index.ios.jsbundle"
     }
     
     func loadRNRootView() {
+        #if DEBUG
+        if reactNativeBridge == nil {
+            reactNativeBridge = ReactNativeBridge()
+        }
+        #else
         reactNativeBridge = nil
         reactNativeBridge = ReactNativeBridge()
+        #endif
         let vc = ReactViewController(moduleName: self.moduleName!, bridge: reactNativeBridge!.bridge)
         self.present(vc, animated: true, completion: nil)
     }
@@ -122,7 +154,7 @@ class ViewController: UIViewController {
         case .success:
             print("下载完成")
             //解压
-            let sourcePath = documentPath + "/" + self.fileName!
+            let sourcePath = documentPath + self.fileName!
             let isSuccess = SSZipArchive.unzipFile(atPath: sourcePath, toDestination: documentPath)
             print("解压结果:\(isSuccess)")
             if isSuccess {

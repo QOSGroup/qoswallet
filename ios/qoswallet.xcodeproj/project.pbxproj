@@ -11,6 +11,7 @@
 		78AE2EC1AEB51B406DBF7E87 /* Pods_qoswalletTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E845F75050787717DCDA427 /* Pods_qoswalletTests.framework */; };
 		B73471C81458D4AA06F987F7 /* Pods_qoswalletUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7DC73B127CF3DF3CD92AC5A /* Pods_qoswalletUITests.framework */; };
 		D22AA1302176DE6C0079DD39 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22AA12F2176DE6C0079DD39 /* Common.swift */; };
+		D22AA13A2178779F0079DD39 /* localModuleConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = D22AA1392178779F0079DD39 /* localModuleConfig.plist */; };
 		D241BDE7217050AD00E00FA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D241BDE6217050AD00E00FA4 /* AppDelegate.swift */; };
 		D241BDE9217050AD00E00FA4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D241BDE8217050AD00E00FA4 /* ViewController.swift */; };
 		D241BDEC217050AD00E00FA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D241BDEA217050AD00E00FA4 /* Main.storyboard */; };
@@ -54,6 +55,7 @@
 		C0CD0AFA62301ED9A95891F7 /* Pods-NativeEmbedRN.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NativeEmbedRN.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NativeEmbedRN/Pods-NativeEmbedRN.debug.xcconfig"; sourceTree = "<group>"; };
 		D0F0ABB91BA9B78A289C448F /* Pods-NativeEmbedRNTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NativeEmbedRNTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NativeEmbedRNTests/Pods-NativeEmbedRNTests.release.xcconfig"; sourceTree = "<group>"; };
 		D22AA12F2176DE6C0079DD39 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		D22AA1392178779F0079DD39 /* localModuleConfig.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = localModuleConfig.plist; sourceTree = "<group>"; };
 		D241BDE3217050AD00E00FA4 /* qoswallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = qoswallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D241BDE6217050AD00E00FA4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D241BDE8217050AD00E00FA4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 				D241BDED217050AD00E00FA4 /* Assets.xcassets */,
 				D241BDEF217050AD00E00FA4 /* LaunchScreen.storyboard */,
 				D241BDF2217050AD00E00FA4 /* Info.plist */,
+				D22AA1392178779F0079DD39 /* localModuleConfig.plist */,
 			);
 			path = qoswallet;
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 				D241BDE0217050AD00E00FA4 /* Frameworks */,
 				D241BDE1217050AD00E00FA4 /* Resources */,
 				BB16483CF2776741D0DC7C9C /* [CP] Embed Pods Frameworks */,
+				450B70907FA0929F8642532C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -224,6 +228,8 @@
 				D241BDF3217050AD00E00FA4 /* Sources */,
 				D241BDF4217050AD00E00FA4 /* Frameworks */,
 				D241BDF5217050AD00E00FA4 /* Resources */,
+				A117F679D66ED60F3A1C62AB /* [CP] Embed Pods Frameworks */,
+				1C887F4CF0A42A398C259BFF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -243,6 +249,8 @@
 				D241BDFE217050AD00E00FA4 /* Sources */,
 				D241BDFF217050AD00E00FA4 /* Frameworks */,
 				D241BE00217050AD00E00FA4 /* Resources */,
+				1DC6E141AA83C90CB05AA436 /* [CP] Embed Pods Frameworks */,
+				C3A80BC58F03462B75A328B7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -307,6 +315,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D241BDF1217050AD00E00FA4 /* LaunchScreen.storyboard in Resources */,
+				D22AA13A2178779F0079DD39 /* localModuleConfig.plist in Resources */,
 				D241BDEE217050AD00E00FA4 /* Assets.xcassets in Resources */,
 				D241BDEC217050AD00E00FA4 /* Main.storyboard in Resources */,
 			);
@@ -347,6 +356,36 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		1C887F4CF0A42A398C259BFF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-qoswalletTests/Pods-qoswalletTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1DC6E141AA83C90CB05AA436 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-qoswalletUITests/Pods-qoswalletUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		1E232A0041B1274A4BE7BE58 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -363,6 +402,36 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		450B70907FA0929F8642532C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-qoswallet/Pods-qoswallet-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A117F679D66ED60F3A1C62AB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-qoswalletTests/Pods-qoswalletTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B679BBE26F626572481AAD6A /* [CP] Check Pods Manifest.lock */ = {
@@ -411,6 +480,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-qoswallet/Pods-qoswallet-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C3A80BC58F03462B75A328B7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-qoswalletUITests/Pods-qoswalletUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
