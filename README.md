@@ -6,6 +6,12 @@ qoswallet
 
 集成H5应用
 
+# RN版本
+0.57.2
+
+# RN当前可用组件
+react-navigation
+
 # Bash
 ```
 RN:
