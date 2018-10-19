@@ -1,6 +1,5 @@
 import React from 'react'
 import { StyleSheet, Text, View, Button, Alert } from 'react-native'
-import LogoTitle from '../components/home/headerTitle'
 import HeaderLeft from '../components/home/headerLeft'
 
 import Component from '../components/base'
@@ -14,7 +13,7 @@ export default class SettingsScreen extends Component {
         return {
             // header:null,
             headerLeft: <HeaderLeft />,
-            headerTitle: <LogoTitle />,
+            headerTitle: '设置',
             headerRight: (
                 <Button
                     onPress={() => Alert.alert('欢迎使用QOS-RN应用')}

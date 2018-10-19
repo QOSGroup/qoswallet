@@ -10,7 +10,6 @@ import SettingDetailsScreen from './pages/settingdetail'
 const MainStack = createStackNavigator(
 	{
 		Home: HomeScreen,
-		Details: DetailsScreen,
 	},
 	{
 		initialRouteName: 'Home',
@@ -22,15 +21,15 @@ const MainStack = createStackNavigator(
 			headerTitleStyle: {
 				fontWeight: 'bold',
 			},
-			headerBackTitle: null
-		}
+			headerBackTitle: null,
+		},
 	}
 )
 
 const SettingStack = createStackNavigator(
 	{
 		Settings: Settings,
-		SettingsDetails: SettingDetailsScreen,
+
 	},
 	{
 		initialRouteName: 'Settings',
@@ -47,17 +46,11 @@ const SettingStack = createStackNavigator(
 	},
 );
 
-// createBottomTabNavigator
 const TabStack = createBottomTabNavigator(
 	{
 		TabMain: {
 			screen: MainStack,
 			navigationOptions: ({ navigation }) => {
-				let tabBarVisible = true;
-				if (navigation.state.index > 0) {
-					tabBarVisible = false;
-				}
-
 				return {
 					tabBarOnPress: (value) => {
 						const { routeName } = navigation.state;
@@ -65,7 +58,6 @@ const TabStack = createBottomTabNavigator(
 						console.log(routeName)
 					},
 					tabBarLabel: '首页',
-					tabBarVisible,
 				}
 			}
 		},
@@ -80,21 +72,44 @@ const TabStack = createBottomTabNavigator(
 				tabBarLabel: '设置',
 			})
 		},
-	}, {
+	},
+	{
 		navigationOptions: () => ({
 			tabBarIcon: () => {
 				// const { routeName } = navigation.state;		
 			}
 		}),
-		// swipeEnabled: true
 	}
 )
 
+const HomeStack = createStackNavigator(
+	{
+		Tabs: {
+			screen: TabStack,
+			navigationOptions: {
+				header: null
+			}
+		},
+		Details: DetailsScreen,
+		SettingsDetails: SettingDetailsScreen,
+	}, {
+		navigationOptions: {
+			headerStyle: {
+				backgroundColor: '#f4511e',
+			},
+			headerTintColor: '#fff',
+			headerTitleStyle: {
+				fontWeight: 'bold',
+			},
+			headerBackTitle: null,
+		}
+	}
+)
 
 const RootStack = createStackNavigator(
 	{
 		Main: {
-			screen: TabStack
+			screen: HomeStack
 		},
 		AboutModal: {
 			screen: AboutModal
