@@ -4,9 +4,14 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "build-ios": "react-native bundle --entry-file index.js --bundle-output ./bundle/ios/index.ios.jsbundle --platform ios --assets-dest ./bundle/ios --dev false",
-    "build-android": "react-native bundle --entry-file index.js --bundle-output ./bundle/android/index.android.jsbundle --platform android --assets-dest ./bundle/android --dev false",
-    "build": "npm run build-ios && npm run build-android"
+    "build-ios": "react-native bundle --entry-file build.js --bundle-output ./bundle/ios/app/app.ios.jsbundle --platform ios --assets-dest ./bundle/ios/app --dev false",
+    "build-android": "react-native bundle --entry-file build.js --bundle-output ./bundle/android/app/app.android.jsbundle --platform android --assets-dest ./bundle/android/app --dev false",
+    "build": "npm run clean:app && npm run build-ios && npm run build-android",
+    "build-wallet-ios": "react-native bundle --entry-file wallet.js --bundle-output ./bundle/ios/wallet/wallet.ios.jsbundle --platform ios --assets-dest ./bundle/ios/wallet --dev false",
+    "build-wallet-android": "react-native bundle --entry-file wallet.js --bundle-output ./bundle/android/wallet/wallet.android.jsbundle --platform android --assets-dest ./bundle/android/wallet --dev false",
+    "build:wallet": "npm run clean:wallet && npm run build-wallet-ios && npm run build-wallet-android",
+    "clean:app": "rm -rf bundle/android/app/* & rm -rf bundle/ios/app/*",
+    "clean:wallet": "rm -rf bundle/android/wallet/* & rm -rf bundle/ios/wallet/*"
   },
   "dependencies": {
     "react": "16.5.0",

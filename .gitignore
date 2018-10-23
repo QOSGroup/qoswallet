@@ -18,10 +18,14 @@ ios/**/*.xcworkspace
 ios/Pods/
 ios/Podfile.lock
 
-bundle/android/*
-!bundle/android/.gitkeep
-bundle/ios/*
-!bundle/ios/.gitkeep
+bundle/android/app/*
+!bundle/android/app/.gitkeep
+bundle/android/wallet/*
+!bundle/android/wallet/.gitkeep
+bundle/ios/app/*
+!bundle/ios/app/.gitkeep
+bundle/ios/wallet/*
+!bundle/ios/wallet/.gitkeep
 
 ios/build/
 *.pbxuser
