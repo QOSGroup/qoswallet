@@ -1,10 +1,10 @@
 import { createStackNavigator } from 'react-navigation'
-import HomeStack from './home'
+import MainStack from './main'
 
 const RootStack = createStackNavigator(
     {
         Main: {
-            screen: HomeStack
+            screen: MainStack
         },
         // AboutModal: {
         //     // screen: AboutModal

@@ -1,7 +1,7 @@
 import { createStackNavigator } from 'react-navigation'
 import TabStack from './tabs'
 
-const HomeStack = createStackNavigator(
+const MainStack = createStackNavigator(
     {
         Tabs: {
             screen: TabStack,
@@ -23,4 +23,4 @@ const HomeStack = createStackNavigator(
     }
 )
 
-export default HomeStack
+export default MainStack
