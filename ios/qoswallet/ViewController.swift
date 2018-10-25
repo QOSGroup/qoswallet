@@ -34,14 +34,17 @@ class ViewController: UIViewController {
     private var moduleName: String?
     //读取本地配置文件
     private var loaclConfigureData: NSDictionary?
+    //账户
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         #if DEBUG
         loadLocalModuleConfigure()
+        print("DEBUG模式")
         #else
         requestConfigure()
+        print("Release模式")
         #endif
     }
     
@@ -102,7 +105,11 @@ class ViewController: UIViewController {
             downloadJSBundle()
         }
     }
+}
+
+extension ViewController {
     
+    //加载本地Module配置文件
     func loadLocalModuleConfigure() {
         let plistPath = Bundle.main.path(forResource: "localModuleConfig", ofType: "plist")
         self.loaclConfigureData = NSDictionary.init(contentsOfFile: plistPath!)
@@ -110,11 +117,13 @@ class ViewController: UIViewController {
         initLoacalUI()
     }
     
+    //组装源文件路径
     func loadSourcePath(fileName: String) {
         let a = fileName as NSString?
         sourcePath = documentPath + (a?.deletingPathExtension)! + "/index.ios.jsbundle"
     }
     
+    //加载RNRootView
     func loadRNRootView() {
         #if DEBUG
         if reactNativeBridge == nil {
@@ -128,6 +137,7 @@ class ViewController: UIViewController {
         self.present(vc, animated: true, completion: nil)
     }
     
+    //下载JSBundle
     func downloadJSBundle() {
         //下载的进度条显示
         Alamofire.download(self.downloadUrl!).downloadProgress(queue: DispatchQueue.main) { (progress) in
@@ -182,4 +192,3 @@ class ViewController: UIViewController {
         }
     }
 }
-
