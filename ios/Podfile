@@ -38,6 +38,8 @@ target 'qoswallet' do
   pod 'Alamofire'
   pod 'SSZipArchive'
 
+  pod 'RNSVG', :path => '../node_modules/react-native-svg'
+
   target 'qoswalletTests' do
     inherit! :search_paths
     # Pods for testing
