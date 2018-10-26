@@ -1,6 +1,7 @@
 import React from 'react'
 import { View, Text, StyleSheet } from 'react-native'
 import BaseComponent from '../../components/base'
+import QRCode from 'react-native-qrcode-svg'
 
 export default class DAppsScreen extends BaseComponent {
     constructor(props) {
@@ -19,9 +20,19 @@ export default class DAppsScreen extends BaseComponent {
                 DApps
             </Text>
         )
+        let logoFromFile =  require('../../images/common/logoforcode.png')
         return (
             <View style={styles.container}>
                 <Text style={styles.scores}>{contents}</Text>
+                <View>
+                    <QRCode
+                        logo={logoFromFile}
+                        size={220}
+                        logoSize={50}
+                        logoBackgroundColor='transparent'
+                        value="https://github.com/QOSGroup"
+                    />
+                </View>
             </View>
         );
     }
