@@ -11,6 +11,11 @@ qoswallet
 
 # RN当前可用组件
 react-navigation
+react-native-qrcode-svg
+react-native-vector-icons
+
+# 开发应用目录
+src/
 
 # Bash
 ```
