@@ -15,6 +15,7 @@ react-native-qrcode-svg
 react-native-vector-icons
 
 # 目录介绍
+```
 .  
 ├── android // Native Code  
 ├── ios // Native Code  
@@ -53,6 +54,7 @@ react-native-vector-icons
 ├── LICENSE  
 ├── README.md  
 └── yarn.lock  
+```
 
 # 开发子应用目录
 src/
