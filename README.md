@@ -15,44 +15,44 @@ react-native-qrcode-svg
 react-native-vector-icons
 
 # 目录介绍
-.
-├── android // Native Code
-├── ios // Native Code
-├── app // 钱包前端RN JS
-│   ├── components
-│   ├── images
-│   ├── main.js
-│   ├── pages
-│   └── route
-├── bundle // RN离线包输出目录
-│   ├── android
-│   │   ├── app // 子应用输出目录
-│   │   └── wallet // 钱包输出目录
-│   └── ios
-│       ├── app // 子应用输出目录
-│       └── wallet // 钱包输出目录
-├── src // 子应用前端RN JS
-│   ├── components
-│   │   ├── base.js
-│   │   └── home
-│   ├── images
-│   │   └── common
-│   ├── main.js
-│   ├── modals
-│   │   └── about.js
-│   ├── pages
-│   │   ├── detail.js
-│   │   ├── home.js
-│   │   ├── setting.js
-│   │   └── settingdetail.js
-│   └── route.js
-├── index.js // RN开发入口
-├── build.js // RN子应用打包入口
-├── wallet.js // 钱包打包入口
-├── package.json
-├── LICENSE
-├── README.md
-└── yarn.lock
+.  
+├── android // Native Code  
+├── ios // Native Code  
+├── app // 钱包前端RN JS   
+│   ├── components  
+│   ├── images  
+│   ├── main.js  
+│   ├── pages  
+│   └── route  
+├── bundle // RN离线包输出目录  
+│   ├── android  
+│   │   ├── app // 子应用输出目录  
+│   │   └── wallet // 钱包输出目录  
+│   └── ios  
+│       ├── app // 子应用输出目录  
+│       └── wallet // 钱包输出目录  
+├── src // 子应用前端RN JS  
+│   ├── components  
+│   │   ├── base.js  
+│   │   └── home  
+│   ├── images  
+│   │   └── common  
+│   ├── main.js  
+│   ├── modals  
+│   │   └── about.js  
+│   ├── pages  
+│   │   ├── detail.js  
+│   │   ├── home.js  
+│   │   ├── setting.js  
+│   │   └── settingdetail.js  
+│   └── route.js  
+├── index.js // RN开发入口  
+├── build.js // RN子应用打包入口  
+├── wallet.js // 钱包打包入口  
+├── package.json  
+├── LICENSE  
+├── README.md  
+└── yarn.lock  
 
 # 开发子应用目录
 src/
