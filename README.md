@@ -54,7 +54,10 @@ react-native-vector-icons
 ├── LICENSE  
 ├── README.md  
 └── yarn.lock  
+<<<<<<< HEAD
 ```
+=======
+>>>>>>> master
 
 # 开发子应用目录
 src/
