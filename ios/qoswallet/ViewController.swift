@@ -34,18 +34,26 @@ class ViewController: UIViewController {
     private var moduleName: String?
     //读取本地配置文件
     private var loaclConfigureData: NSDictionary?
-    //账户
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        #if DEBUG
-        loadLocalModuleConfigure()
-        print("DEBUG模式")
-        #else
-        requestConfigure()
-        print("Release模式")
-        #endif
+//        #if DEBUG
+//        loadLocalModuleConfigure()
+//        print("DEBUG模式")
+//        #else
+//        requestConfigure()
+//        print("Release模式")
+//        #endif
+    
+        ReactRootViewManager.shared.preLoadRootViewWithName(viewName: "QOSWallet")
+        view = ReactRootViewManager.shared.rootViewWithName(viewName: "QOSWallet")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super .viewWillAppear(animated)
+       // view = ReactRootViewManager.shared.rootViewWithName(viewName: "qosexample")
+        
     }
     
     override func didReceiveMemoryWarning() {

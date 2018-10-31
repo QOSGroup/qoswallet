@@ -24,6 +24,7 @@
 		C3D5B0937E984F328204E79B /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 691BBBE8A9FC4CCF9A310272 /* MaterialIcons.ttf */; };
 		D22AA1302176DE6C0079DD39 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22AA12F2176DE6C0079DD39 /* Common.swift */; };
 		D22AA13A2178779F0079DD39 /* localModuleConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = D22AA1392178779F0079DD39 /* localModuleConfig.plist */; };
+		D230C8B2218855AD002A3EF5 /* ReactRootViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D230C8B1218855AD002A3EF5 /* ReactRootViewManager.swift */; };
 		D241BDE7217050AD00E00FA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D241BDE6217050AD00E00FA4 /* AppDelegate.swift */; };
 		D241BDE9217050AD00E00FA4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D241BDE8217050AD00E00FA4 /* ViewController.swift */; };
 		D241BDEC217050AD00E00FA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D241BDEA217050AD00E00FA4 /* Main.storyboard */; };
@@ -85,6 +86,7 @@
 		D0F0ABB91BA9B78A289C448F /* Pods-NativeEmbedRNTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NativeEmbedRNTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NativeEmbedRNTests/Pods-NativeEmbedRNTests.release.xcconfig"; sourceTree = "<group>"; };
 		D22AA12F2176DE6C0079DD39 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		D22AA1392178779F0079DD39 /* localModuleConfig.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = localModuleConfig.plist; sourceTree = "<group>"; };
+		D230C8B1218855AD002A3EF5 /* ReactRootViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactRootViewManager.swift; sourceTree = "<group>"; };
 		D241BDE3217050AD00E00FA4 /* qoswallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = qoswallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D241BDE6217050AD00E00FA4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D241BDE8217050AD00E00FA4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 				D24253EC217431B400A6AE94 /* RNBridgeModule.m */,
 				D24253F0217439CF00A6AE94 /* RNBridgeModule.swift */,
 				D24253F22174BFE400A6AE94 /* ReactNativeBridge.swift */,
+				D230C8B1218855AD002A3EF5 /* ReactRootViewManager.swift */,
 				D24253EA217431B400A6AE94 /* qoswallet-Bridging-Header.h */,
 				D241BDEA217050AD00E00FA4 /* Main.storyboard */,
 				D241BDED217050AD00E00FA4 /* Assets.xcassets */,
@@ -503,6 +506,7 @@
 				D241BDE7217050AD00E00FA4 /* AppDelegate.swift in Sources */,
 				D24253E72170B61700A6AE94 /* ReactViewController.swift in Sources */,
 				D24253F1217439CF00A6AE94 /* RNBridgeModule.swift in Sources */,
+				D230C8B2218855AD002A3EF5 /* ReactRootViewManager.swift in Sources */,
 				D22AA1302176DE6C0079DD39 /* Common.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
