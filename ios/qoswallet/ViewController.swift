@@ -34,6 +34,7 @@ class ViewController: UIViewController {
     private var moduleName: String?
     //读取本地配置文件
     private var loaclConfigureData: NSDictionary?
+    //账户
     
     override func viewDidLoad() {
         super.viewDidLoad()
