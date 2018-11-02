@@ -33,7 +33,7 @@ public class QosReactActivity extends Activity implements DefaultHardwareBackBtn
                 .addPackage(new MainReactPackage())
                 .setUseDeveloperSupport(BuildConfig.DEBUG)
                 .setInitialLifecycleState(LifecycleState.RESUMED)
-                .buiuld();
+                .build();
 
         // 注意这里的MyReactNativeApp必须对应“index.js”中的
         // “AppRegistry.registerComponent()”的第一个参数
