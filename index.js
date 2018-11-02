@@ -1,5 +1,5 @@
 import { AppRegistry } from 'react-native'
-import QOSWalletExample from './src/main'
+// import QOSWalletExample from './src/main'
 
 import QOSWallet from './app/main'
 
