@@ -1,14 +1,13 @@
 import { createStackNavigator } from 'react-navigation'
 import MainStack from './main'
+import modals from './modals'
 
 const RootStack = createStackNavigator(
     {
         Main: {
             screen: MainStack
         },
-        // AboutModal: {
-        //     // screen: AboutModal
-        // }
+        ...modals
     },
     {
         mode: 'modal',
