@@ -1,8 +1,9 @@
-import { createStackNavigator } from 'react-navigation'
+import { createStackNavigator, createSwitchNavigator } from 'react-navigation'
 import MainStack from './main'
 import modals from './modals'
+import CreateStack from './sign'
 
-const RootStack = createStackNavigator(
+const AllStack = createStackNavigator(
     {
         Main: {
             screen: MainStack
@@ -10,8 +11,19 @@ const RootStack = createStackNavigator(
         ...modals
     },
     {
+        initialRouteName: 'Main',
         mode: 'modal',
         headerMode: 'none',
+    }
+)
+
+const RootStack = createSwitchNavigator(
+    {
+        Sign: CreateStack,
+        All: AllStack
+    },
+    {
+        initialRouteName: 'Sign'
     }
 )
 
