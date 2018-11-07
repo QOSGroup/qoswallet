@@ -4,9 +4,9 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.KeyEvent;
 
-import com.facebook.react.LifecycleState;
 import com.facebook.react.ReactInstanceManager;
 import com.facebook.react.ReactRootView;
+import com.facebook.react.common.LifecycleState;
 import com.facebook.react.modules.core.DefaultHardwareBackBtnHandler;
 import com.facebook.react.shell.MainReactPackage;
 
@@ -29,7 +29,7 @@ public class QosReactActivity extends Activity implements DefaultHardwareBackBtn
         mReactInstanceManager = ReactInstanceManager.builder()
                 .setApplication(getApplication())
                 .setBundleAssetName("index.android.bundle")
-                .setJSMainModuleName("index")
+                .setJSMainModulePath("index")
                 .addPackage(new MainReactPackage())
                 .setUseDeveloperSupport(BuildConfig.DEBUG)
                 .setInitialLifecycleState(LifecycleState.RESUMED)
@@ -51,27 +51,27 @@ public class QosReactActivity extends Activity implements DefaultHardwareBackBtn
     protected void onPause() {
         super.onPause();
 
-//        if (mReactInstanceManager != null) {
-//            mReactInstanceManager.onHostPause(this);
-//        }
+        if (mReactInstanceManager != null) {
+            mReactInstanceManager.onHostPause(this);
+        }
     }
 
     @Override
     protected void onResume() {
         super.onResume();
 
-//        if (mReactInstanceManager != null) {
-//            mReactInstanceManager.onHostResume(this, this);
-//        }
+        if (mReactInstanceManager != null) {
+            mReactInstanceManager.onHostResume(this, this);
+        }
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
 
-//        if (mReactInstanceManager != null) {
-//            mReactInstanceManager.onHostDestroy();
-//        }
+        if (mReactInstanceManager != null) {
+            mReactInstanceManager.destroy();
+        }
     }
 
     @Override
