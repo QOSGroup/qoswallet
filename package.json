@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
+    "bundle-android": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res/",
     "build-ios": "react-native bundle --entry-file build.js --bundle-output ./bundle/ios/app/app.ios.jsbundle --platform ios --assets-dest ./bundle/ios/app --dev false",
     "build-android": "react-native bundle --entry-file build.js --bundle-output ./bundle/android/app/app.android.jsbundle --platform android --assets-dest ./bundle/android/app --dev false",
     "build": "npm run clean:app && npm run build-ios && npm run build-android",

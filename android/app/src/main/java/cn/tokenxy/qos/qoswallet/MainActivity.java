@@ -1,6 +1,5 @@
 package cn.tokenxy.qos.qoswallet;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
@@ -10,17 +9,17 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class QosActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {
 
     private static final int OVERLAY_PERMISSION_REQ_CODE = 0;
-//    private Button btn;
+    private Button btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_qos);
 
-//        btn = findViewById(R.id.btn);
+        btn = findViewById(R.id.btn);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             if (!Settings.canDrawOverlays(this)) {
                 Intent intent = new Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION,
@@ -29,8 +28,16 @@ public class QosActivity extends AppCompatActivity {
             }
         }
 
-        Intent intent = new Intent(QosActivity.this, QosReactActivity.class);
-        startActivity(intent);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, QosReactActivity.class);
+                startActivity(intent);
+            }
+        });
+
+//        Intent intent = new Intent(MainActivity.this, QosReactActivity.class);
+//        startActivity(intent);
     }
 
     @Override
