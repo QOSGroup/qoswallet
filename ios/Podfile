@@ -37,6 +37,7 @@ target 'qoswallet' do
   # Pods for qoswallet
   pod 'Alamofire'
   pod 'SSZipArchive'
+  pod 'WKWebViewJavascriptBridge', '~> 1.1.0'
 
   pod 'RNSVG', :path => '../node_modules/react-native-svg'
 

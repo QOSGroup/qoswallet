@@ -25,6 +25,7 @@
 		D22AA1302176DE6C0079DD39 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22AA12F2176DE6C0079DD39 /* Common.swift */; };
 		D22AA13A2178779F0079DD39 /* localModuleConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = D22AA1392178779F0079DD39 /* localModuleConfig.plist */; };
 		D230C8B2218855AD002A3EF5 /* ReactRootViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D230C8B1218855AD002A3EF5 /* ReactRootViewManager.swift */; };
+		D230CA03219AE62B002A3EF5 /* WKViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D230CA02219AE623002A3EF5 /* WKViewController.swift */; };
 		D241BDE7217050AD00E00FA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D241BDE6217050AD00E00FA4 /* AppDelegate.swift */; };
 		D241BDE9217050AD00E00FA4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D241BDE8217050AD00E00FA4 /* ViewController.swift */; };
 		D241BDEC217050AD00E00FA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D241BDEA217050AD00E00FA4 /* Main.storyboard */; };
@@ -60,33 +61,34 @@
 
 /* Begin PBXFileReference section */
 		017ECE414B1BBD27CE16E2AB /* Pods-qoswalletUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-qoswalletUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-qoswalletUITests/Pods-qoswalletUITests.release.xcconfig"; sourceTree = "<group>"; };
-		04CD7711910F40CD9FDE810E /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
-		05F7CAD66B67472CA440CD80 /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
-		07AD4C1295B84BA6A7EC4AC5 /* AntDesign.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = AntDesign.ttf; path = "../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf"; sourceTree = "<group>"; };
+		04CD7711910F40CD9FDE810E /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
+		05F7CAD66B67472CA440CD80 /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
+		07AD4C1295B84BA6A7EC4AC5 /* AntDesign.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = AntDesign.ttf; path = "../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf"; sourceTree = "<group>"; };
 		0E845F75050787717DCDA427 /* Pods_qoswalletTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_qoswalletTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		11B7401DB1F547AEA2F52C83 /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Regular.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; };
+		11B7401DB1F547AEA2F52C83 /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Regular.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; };
 		16B8374F46924D2656DAEAB3 /* Pods-qoswalletTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-qoswalletTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-qoswalletTests/Pods-qoswalletTests.release.xcconfig"; sourceTree = "<group>"; };
-		1DD0D99D355F440A8F0FD5C0 /* Feather.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Feather.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Feather.ttf"; sourceTree = "<group>"; };
-		1EC9B753571B4B51A59BFC9F /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialCommunityIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
-		287116C1F6DD4A309DD5EA9A /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
+		1DD0D99D355F440A8F0FD5C0 /* Feather.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Feather.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Feather.ttf"; sourceTree = "<group>"; };
+		1EC9B753571B4B51A59BFC9F /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialCommunityIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
+		287116C1F6DD4A309DD5EA9A /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
 		2AB3C10C1CE33AF568085535 /* Pods-NativeEmbedRNUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NativeEmbedRNUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NativeEmbedRNUITests/Pods-NativeEmbedRNUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		2B7CDCE203FB87DC71B226D5 /* Pods_qoswallet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_qoswallet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C6FC32C7F63641CD2C830AF /* Pods-qoswallet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-qoswallet.release.xcconfig"; path = "Pods/Target Support Files/Pods-qoswallet/Pods-qoswallet.release.xcconfig"; sourceTree = "<group>"; };
-		4ED4CAEEBA774391A19215A7 /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
-		55D3BE75FEB446B2B8729C3C /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
-		588541F78B9B4457B69733D0 /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Brands.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; };
+		4ED4CAEEBA774391A19215A7 /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
+		55D3BE75FEB446B2B8729C3C /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
+		588541F78B9B4457B69733D0 /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Brands.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; };
 		6856E3AD6EAAF812C936E5B8 /* Pods-NativeEmbedRNTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NativeEmbedRNTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NativeEmbedRNTests/Pods-NativeEmbedRNTests.debug.xcconfig"; sourceTree = "<group>"; };
-		691BBBE8A9FC4CCF9A310272 /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
+		691BBBE8A9FC4CCF9A310272 /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
 		6D7072DE687B6B08D7AE200D /* Pods-NativeEmbedRN.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NativeEmbedRN.release.xcconfig"; path = "Pods/Target Support Files/Pods-NativeEmbedRN/Pods-NativeEmbedRN.release.xcconfig"; sourceTree = "<group>"; };
-		8971370D7D57443692A9315E /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = SimpleLineIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
+		8971370D7D57443692A9315E /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SimpleLineIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
 		91FF521AF3E167A34E62631E /* Pods-qoswalletTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-qoswalletTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-qoswalletTests/Pods-qoswalletTests.debug.xcconfig"; sourceTree = "<group>"; };
-		AA435292EEEC49A992B5C4C1 /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Solid.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Solid.ttf"; sourceTree = "<group>"; };
+		AA435292EEEC49A992B5C4C1 /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Solid.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Solid.ttf"; sourceTree = "<group>"; };
 		C0CD0AFA62301ED9A95891F7 /* Pods-NativeEmbedRN.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NativeEmbedRN.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NativeEmbedRN/Pods-NativeEmbedRN.debug.xcconfig"; sourceTree = "<group>"; };
-		C7733BF9EE8641318C4B9363 /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
+		C7733BF9EE8641318C4B9363 /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
 		D0F0ABB91BA9B78A289C448F /* Pods-NativeEmbedRNTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NativeEmbedRNTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NativeEmbedRNTests/Pods-NativeEmbedRNTests.release.xcconfig"; sourceTree = "<group>"; };
 		D22AA12F2176DE6C0079DD39 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		D22AA1392178779F0079DD39 /* localModuleConfig.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = localModuleConfig.plist; sourceTree = "<group>"; };
 		D230C8B1218855AD002A3EF5 /* ReactRootViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactRootViewManager.swift; sourceTree = "<group>"; };
+		D230CA02219AE623002A3EF5 /* WKViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKViewController.swift; sourceTree = "<group>"; };
 		D241BDE3217050AD00E00FA4 /* qoswallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = qoswallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D241BDE6217050AD00E00FA4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D241BDE8217050AD00E00FA4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -108,7 +110,7 @@
 		E80D2F4425670150E1C0FACC /* Pods-qoswalletUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-qoswalletUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-qoswalletUITests/Pods-qoswalletUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EFE1708FCB8AA772C7AA32BD /* Pods-NativeEmbedRNUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NativeEmbedRNUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NativeEmbedRNUITests/Pods-NativeEmbedRNUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F152C61291997495F9105600 /* Pods-qoswallet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-qoswallet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-qoswallet/Pods-qoswallet.debug.xcconfig"; sourceTree = "<group>"; };
-		F5E11C7AFB42480D8BD39220 /* Entypo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Entypo.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
+		F5E11C7AFB42480D8BD39220 /* Entypo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Entypo.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
 		F7DC73B127CF3DF3CD92AC5A /* Pods_qoswalletUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_qoswalletUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -160,7 +162,6 @@
 				4ED4CAEEBA774391A19215A7 /* Zocial.ttf */,
 			);
 			name = Resources;
-			path = "";
 			sourceTree = "<group>";
 		};
 		AD588629FD1A5AD83C38D5C8 /* Frameworks */ = {
@@ -208,6 +209,7 @@
 				D24253F22174BFE400A6AE94 /* ReactNativeBridge.swift */,
 				D230C8B1218855AD002A3EF5 /* ReactRootViewManager.swift */,
 				D24253EA217431B400A6AE94 /* qoswallet-Bridging-Header.h */,
+				D230CA02219AE623002A3EF5 /* WKViewController.swift */,
 				D241BDEA217050AD00E00FA4 /* Main.storyboard */,
 				D241BDED217050AD00E00FA4 /* Assets.xcassets */,
 				D241BDEF217050AD00E00FA4 /* LaunchScreen.storyboard */,
@@ -538,6 +540,7 @@
 				"${BUILT_PRODUCTS_DIR}/RNVectorIcons/RNVectorIcons.framework",
 				"${BUILT_PRODUCTS_DIR}/React/React.framework",
 				"${BUILT_PRODUCTS_DIR}/SSZipArchive/SSZipArchive.framework",
+				"${BUILT_PRODUCTS_DIR}/WKWebViewJavascriptBridge/WKWebViewJavascriptBridge.framework",
 				"${BUILT_PRODUCTS_DIR}/glog/glog.framework",
 				"${BUILT_PRODUCTS_DIR}/yoga/yoga.framework",
 			);
@@ -550,6 +553,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RNVectorIcons.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/React.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SSZipArchive.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WKWebViewJavascriptBridge.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/glog.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/yoga.framework",
 			);
@@ -581,6 +585,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D241BDE9217050AD00E00FA4 /* ViewController.swift in Sources */,
+				D230CA03219AE62B002A3EF5 /* WKViewController.swift in Sources */,
 				D24253F32174BFE400A6AE94 /* ReactNativeBridge.swift in Sources */,
 				D24253ED217431B400A6AE94 /* RNBridgeModule.m in Sources */,
 				D241BDE7217050AD00E00FA4 /* AppDelegate.swift in Sources */,
