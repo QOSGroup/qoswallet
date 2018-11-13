@@ -3,7 +3,7 @@
 //  StarCloud
 //
 //  Created by Wanghao on 2018/9/27.
-//  Copyright © 2018年 sessionCh. All rights reserved.
+//  Copyright © 2018年 qos. All rights reserved.
 //
 
 import UIKit
@@ -13,7 +13,6 @@ import WKWebViewJavascriptBridge
 typealias ObserveBlock = ()->();
 
 class WKViewController: UIViewController, WKUIDelegate {
-//    let webView = WKWebView(frame: CGRect(), configuration: WKWebViewConfiguration())
     var bridge: WKWebViewJavascriptBridge!
     let callbackBtn = UIButton(type: .custom)
     let reloadBtn = UIButton(type: .custom)
