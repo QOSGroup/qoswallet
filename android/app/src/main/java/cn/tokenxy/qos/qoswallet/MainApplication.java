@@ -51,6 +51,6 @@ public class MainApplication extends Application implements ReactApplication {
         SoLoader.init(this, /* native exopackage */ false);
         //配置本机ip和端口号
         SharedPreferences mPreferences =    PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-        mPreferences.edit().putString("debug_http_host","192.168.1.27:8081").commit();//这里要配置下自己的ip地址
+        mPreferences.edit().putString("debug_http_host","192.168.1.13:8081").commit();//这里要配置下自己的ip地址
     }
 }

@@ -1,6 +1,7 @@
 import React from 'react'
 
-import { NativeModules, StatusBarManager, Platform, Dimensions } from 'react-native'
+import { NativeModules, Platform, Dimensions } from 'react-native'
+const { StatusBarManager } = NativeModules;
 import { Header } from 'react-navigation'
 import assets from '../assets'
 
