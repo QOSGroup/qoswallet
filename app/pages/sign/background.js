@@ -15,10 +15,12 @@ export default class BackgroundScreen extends BaseComponent {
     }
 
     render() {
-
+        console.log('dddd')
+        console.log('this.screenW', this.screenW)
         return (
             <View style={styles.container}>
-                <Image source={this.assets.common.bg}></Image>
+                <Image style={{ width: this.screenW, height: this.getScaleHeigth(776) }}
+                    source={this.assets.common.bg}></Image>
             </View>
         );
     }
@@ -31,5 +33,8 @@ const styles = StyleSheet.create({
         // justifyContent: 'center',
         // alignItems: 'center',
         // backgroundColor: 'red'
+    },
+    bg: {
+        width: '100%'
     }
 });

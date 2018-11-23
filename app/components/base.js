@@ -1,6 +1,7 @@
 import React from 'react'
 
-import { NativeModules, StatusBarManager, Platform, Dimensions } from 'react-native'
+import { NativeModules, Platform, Dimensions } from 'react-native'
+const { StatusBarManager } = NativeModules;
 import { Header } from 'react-navigation'
 import assets from '../assets'
 
@@ -13,6 +14,8 @@ export default class BaseComponent extends React.Component {
         this.assets = assets
         this.HEADER_HEIGHT = Header.HEIGHT
         this.STATUSBAR_HEIGHT = this.getStatusBarHeight()
+        this.screenW = Dimensions.get('window').width
+        this.screenH = Dimensions.get('window').height
     }
 
     /**
@@ -23,15 +26,14 @@ export default class BaseComponent extends React.Component {
     }
 
     isIphoneX() {
-        let screenW = Dimensions.get('window').width;
-        let screenH = Dimensions.get('window').height;
+       
         // iPhoneX
         const X_WIDTH = 375;
         const X_HEIGHT = 812;
         return (
             Platform.OS === 'ios' &&
-            ((screenH === X_HEIGHT && screenW === X_WIDTH) ||
-                (screenH === X_WIDTH && screenW === X_HEIGHT))
+            ((this.screenH === X_HEIGHT && this.screenW === X_WIDTH) ||
+                (this.screenH === X_WIDTH && this.screenW === X_HEIGHT))
         )
     }
 
@@ -45,4 +47,7 @@ export default class BaseComponent extends React.Component {
         }
     }
 
+    getScaleHeigth(height){
+        return height * this.screenW / 750
+    }
 }
