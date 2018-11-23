@@ -30,8 +30,8 @@ android {
 }
 
 dependencies {
-    compile project(':react-native-vector-icons')
-    compile project(':react-native-svg')
+    implementation project(':react-native-vector-icons')
+    implementation project(':react-native-svg')
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support:appcompat-v7:27.1.1'
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
@@ -40,6 +40,7 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     api 'com.facebook.react:react-native:+'//这里是对RN的依赖
     implementation 'com.android.support:support-v4:27.1.1'
+    implementation "com.facebook.react:react-native:+"
 }
 
 //添加maven本地库
@@ -49,10 +50,6 @@ allprojects {
         maven {
             // All of React Native (JS, Android binaries) is installed from npm
             url "$rootDir/../node_modules/react-native/android"
-        }
-        maven {
-            // All of React Native (JS, Android binaries) is installed from npm
-            url "$rootDir/../node_modules/react-native-svg/android"
         }
     }
 }

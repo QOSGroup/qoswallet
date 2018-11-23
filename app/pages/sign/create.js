@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, StyleSheet, Image, Button, NavigationActions } from 'react-native'
+import { View, Text, StyleSheet, Image, NavigationActions, TouchableOpacity } from 'react-native'
 import SignBaseComponent from './signbase'
 
 export default class CreateScreen extends SignBaseComponent {
@@ -8,8 +8,7 @@ export default class CreateScreen extends SignBaseComponent {
         this.goto = this.goto.bind(this);
     }
 
-    goto(){
-        console.log('--------------------------')
+    goto() {
         const navigateAction = NavigationActions.navigate({
             routeName: 'All',
 
@@ -17,11 +16,11 @@ export default class CreateScreen extends SignBaseComponent {
 
             action: NavigationActions.navigate({ routeName: 'AboutModal' }),
         });
-        this.props.navigation.dispatch(navigateAction) 
+        this.props.navigation.dispatch(navigateAction)
     }
 
     static navigationOptions = (props) => {
-        const {navigate} = props.navigation;
+        const { navigate } = props.navigation;
         // console.log(dispatch)
         console.log('--------------------------')
         // const navigateAction = NavigationActions.navigate({
@@ -34,12 +33,16 @@ export default class CreateScreen extends SignBaseComponent {
         return {
             // headerTitle: '轻钱包',
             headerRight: (
-                <Button
-                    style={styles.headerRight}
-                    onPress={() => { navigate('All') }}
-                    title="先逛逛"
-                    color="#fff"
-                />
+                // <Button
+                //     style={styles.headerRight}
+                //     onPress={() => { navigate('All') }}
+                //     title="先逛逛"
+                //     color="#fff"
+                // />
+                <TouchableOpacity onPress={() => { navigate('All') }}>
+                    <Text style={styles.headerRight}>先逛逛</Text>
+                </TouchableOpacity>
+
             ),
         }
     }
@@ -52,7 +55,8 @@ export default class CreateScreen extends SignBaseComponent {
         )
         return (
             <View style={{ ...styles.container, paddingTop: this.top }}>
-                <Image style={styles.bg} source={this.assets.common.bg}></Image>
+                <Image style={{ width: this.screenW, height: 776 * this.screenW / 750, ...styles.bg }}
+                    source={this.assets.common.bg}></Image>
                 <View>
 
                 </View>
@@ -76,11 +80,12 @@ const styles = StyleSheet.create({
     headerRight: {
         color: '#fff',
         marginRight: 10,
-        fontSize: 14
+        fontSize: 14,
+        backgroundColor: 'transparent'
     },
     bg: {
-        width: '100%',
-        height: 388,
+        // width: '100%',
+        // height: 388,
         position: 'absolute',
         top: 0,
         left: 0
